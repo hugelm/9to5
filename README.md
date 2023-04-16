@@ -1,7 +1,7 @@
 # 9to5
-This is the website for project "9to5 Events".
+This repository contains the source code of the website for project "9to5 Events".
 
-# Template
+# based on Template
 
 Template Name: TheEvent
 
