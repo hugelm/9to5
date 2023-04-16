@@ -1,4 +1,4 @@
-# Website: 9to5 Events
+# Description
 This repository contains the source code of the website for project "9to5 Events".
 
 # based on Template
