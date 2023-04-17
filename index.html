@@ -11,7 +11,7 @@
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="apple-touch-icon">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -39,7 +39,8 @@
     <div class="container-fluid container-xxl d-flex align-items-center">
 
       <div id="logo" class="me-auto">
-        <a href="index.html" class="scrollto"><img src="assets/img/logo.png" alt="" title="9to5 Events"></a>
+        <h1><a href="index.html"><span>9to5</span> Events</a></h1>
+        <!--<a href="index.html" class="scrollto"><img src="assets/img/logo.png" alt="" title="9to5 Events"></a>-->
       </div>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
@@ -52,20 +53,26 @@
           <li><a class="nav-link scrollto" href="#contact">Kontakt</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav>
       <a class="tickets" href="#tickets">Tickets kaufen</a>
 
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
+  <!-- ======= HERO ======= -->
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-      <h1 class="mb-4 pb-0">The Annual<br><span>Marketing</span> Conference</h1>
-      <p class="mb-4 pb-0">10-12 December, Downtown Conference Center, New York</p>
-      <a href="#about" class="about-btn scrollto">Wann und wo?</a>
-      <script src="https://cdn.logwork.com/widget/countdown.js"></script>
-      <a href="https://logwork.com/countdown-yu8a" class="countdown-timer" data-style="circles" data-timezone="Europe/Berlin" data-date="2023-04-19 20:42" data-background="#ff4d29">Countdown</a>
+      <h1 class="mb-4 pb-0"><span>Halloween</span> Party</h1>
+      <p class="mb-4 pb-0">28 Oct, TSG Halle Bürstadt</p>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="glightbox play-btn mb-4"></a>
+      <a href="#about" class="about-btn scrollto">Mehr Infos</a>
+
+      <!-- Countdown -->
+      <!-- example from: https://bootstrapious.com/p/bootstrap-countdown-->
+      <div class="rounded text-white shadow p-5 text-center mb-5">
+        <div id="clock" class="countdown"></div>
+      </div>
+
     </div>
   </section><!-- End Hero Section -->
 
@@ -1030,8 +1037,12 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js" integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
 
 </body>
 

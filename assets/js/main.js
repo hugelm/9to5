@@ -96,6 +96,22 @@
   }
 
   /**
+   * Back to top button
+   */
+  let backtotop = select('.back-to-top')
+  if (backtotop) {
+    const toggleBacktotop = () => {
+      if (window.scrollY > 100) {
+        backtotop.classList.add('active')
+      } else {
+        backtotop.classList.remove('active')
+      }
+    }
+    window.addEventListener('load', toggleBacktotop)
+    onscroll(document, toggleBacktotop)
+  }
+
+  /**
    * Mobile nav toggle
    */
   on('click', '.mobile-nav-toggle', function(e) {
@@ -214,3 +230,22 @@
   });
 
 })()
+
+$(function () {
+
+  /* =========================================
+      COUNTDOWN
+   ========================================= */
+  function getDate() {
+    return new Date(2023,9,28,21,0,0);
+  }
+
+  $('#clock').countdown(getDate(), function(event) {
+    var $this = $(this).html(event.strftime(''
+        + '<span class="h1 font-weight-bold">%D</span> Days'
+        + '<span class="h1 font-weight-bold">%H</span> Hrs'
+        + '<span class="h1 font-weight-bold">%M</span> Mins'
+        + '<span class="h1 font-weight-bold">%S</span> Secs'));
+  });
+
+});
