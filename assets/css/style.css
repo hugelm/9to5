@@ -1394,7 +1394,7 @@ h6 {
 }
 
 #contact .php-email-form button[type=submit] {
-  background: var(--color-primary);;
+  background: var(--color-primary);
   border: 0;
   padding: 10px 40px;
   color: #fff;
@@ -1404,7 +1404,7 @@ h6 {
 }
 
 #contact .php-email-form button[type=submit]:hover {
-  background: var(--color-secondary);;
+  background: var(--color-secondary);
 }
 
 @keyframes animate-loading {
