@@ -1077,7 +1077,7 @@ h6 {
 }
 
 #faq .faq-list li {
-  border-bottom: 1px solid var(--color-primary);;
+  border-bottom: 1px solid var(--color-secondary);;
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
@@ -1090,7 +1090,7 @@ h6 {
   font-weight: 400;
   padding-left: 25px;
   cursor: pointer;
-  color: var(--color-secondary);
+  color: var(--color-topic);
   transition: 0.3s;
 }
 
@@ -1104,7 +1104,7 @@ h6 {
 #faq .faq-list p {
   margin-bottom: 0;
   padding: 10px 0 0 25px;
-  color: var(--color-secondary);
+  color: var(--color-white);
 }
 
 #faq .faq-list .icon-show {
@@ -1112,11 +1112,11 @@ h6 {
 }
 
 #faq .faq-list .collapsed {
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 #faq .faq-list .collapsed:hover {
-  color: var(--color-primary);
+  color: var(--color-topic);
 }
 
 #faq .faq-list .collapsed .icon-show {
@@ -1294,12 +1294,6 @@ h6 {
   color: var(--color-primary);
 }
 
-#contact .contact-info address,
-#contact .contact-info p {
-  margin-bottom: 0;
-  color: var(--color-primary);
-}
-
 #contact .contact-info h3 {
   font-size: 18px;
   margin-bottom: 15px;
@@ -1309,11 +1303,11 @@ h6 {
 }
 
 #contact .contact-info a {
-  color: var(--color-primary);
+  color: var(--color-white);
 }
 
 #contact .contact-info a:hover {
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 #contact .contact-address,
@@ -1400,7 +1394,7 @@ h6 {
 }
 
 #contact .php-email-form button[type=submit] {
-  background: #f82249;
+  background: var(--color-primary);;
   border: 0;
   padding: 10px 40px;
   color: #fff;
@@ -1410,7 +1404,7 @@ h6 {
 }
 
 #contact .php-email-form button[type=submit]:hover {
-  background: #e0072f;
+  background: var(--color-secondary);;
 }
 
 @keyframes animate-loading {
