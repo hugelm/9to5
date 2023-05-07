@@ -211,13 +211,6 @@
   });
 
   /**
-   * Buy tickets select the ticket type on click
-   */
-  on('show.bs.modal', '#buy-ticket-modal', function(event) {
-    select('#buy-ticket-modal #ticket-type').value = event.relatedTarget.getAttribute('data-ticket-type')
-  })
-
-  /**
    * Animation on scroll
    */
   window.addEventListener('load', () => {
@@ -242,10 +235,10 @@ $(function () {
 
   $('#clock').countdown(getDate(), function(event) {
     var $this = $(this).html(event.strftime(''
-        + '<span class="h1 font-weight-bold">%D</span> Days'
-        + '<span class="h1 font-weight-bold">%H</span> Hrs'
-        + '<span class="h1 font-weight-bold">%M</span> Mins'
-        + '<span class="h1 font-weight-bold">%S</span> Secs'));
+        + '<span class="h1 font-weight-bold">%D:</span>'
+        + '<span class="h1 font-weight-bold">%H:</span>'
+        + '<span class="h1 font-weight-bold">%M:</span>'
+        + '<span class="h1 font-weight-bold">%S</span>'));
   });
 
 });
