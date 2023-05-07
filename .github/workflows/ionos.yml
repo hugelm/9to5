@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Install SSH
+        run: apt-get update && apt-get install -y openssh-client
       - name: Upload files to IONOS
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
@@ -17,3 +19,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./.github/
           server-dir: /9to5/
+          protocol: sftp
