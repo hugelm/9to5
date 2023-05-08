@@ -583,7 +583,7 @@ h6 {
 # About Section
 --------------------------------------------------------------*/
 #about {
-  background: url("../img/logos/halloween.jpg");
+  background: url(../img/logos/dark_slogan_halloween.jpg);
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -1103,7 +1103,7 @@ h6 {
 --------------------------------------------------------------*/
 #news {
   padding: 60px;
-  background: url(../img/logos/vanilla.jpg) center center no-repeat;
+  background: url(../img/logos/dark_slogan.jpg) center center no-repeat;
   background-size: cover;
   overflow: hidden;
   position: relative;
