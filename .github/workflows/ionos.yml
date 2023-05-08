@@ -1,19 +1,23 @@
-name: Deploy to IONOS
+name: productive-hosting-deployment
 on:
   push:
     branches:
       - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    name: Deploy to IONOS
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Upload files to IONOS
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      - name: Deploy file
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
+          server: ${{ secrets.FTP_SERVER }}
+          port: ${{ secrets.FTP_PORT }}
+          local_path: './'
+          remote_path: '/9to5/'
+          sftp_only: true
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./.github
-          server-dir: /9to5
