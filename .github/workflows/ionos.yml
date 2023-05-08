@@ -16,7 +16,7 @@ jobs:
               username: ${{ secrets.FTP_USERNAME }}
               server: ${{ secrets.FTP_SERVER }}
               port: ${{ secrets.FTP_PORT }}
-              local_path: '/.github/*'
+              local_path: '/.github/workflows/*'
               remote_path: '/9to5/'
               sftp_only: true
               password: ${{ secrets.FTP_PASSWORD }}
