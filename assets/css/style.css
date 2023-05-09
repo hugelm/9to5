@@ -14,7 +14,6 @@
   --color-dark: #000;
 }
 
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -195,7 +194,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #fff;
+  color: var(--color-white);
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -220,7 +219,7 @@ h6 {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: var(--color-dark);
   transition: 0.3s;
   z-index: 999;
 }
@@ -239,7 +238,7 @@ h6 {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #fff;
+  background-color: var(--color-dark);
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -258,7 +257,7 @@ h6 {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #060c22;
+  color: var(--color-white);
 }
 
 .navbar-mobile a:hover,
@@ -272,6 +271,9 @@ h6 {
   margin: 15px;
 }
 
+/**
+* Ticket Button
+*/
 .tickets {
   color: var(--color-white);
   background: var(--color-primary);
@@ -284,11 +286,6 @@ h6 {
   line-height: 1;
   font-size: 13px;
   white-space: nowrap;
-}
-
-.tickets:hover {
-  background: none;
-  color: var(--color-white);
 }
 
 .tickets:focus {
@@ -419,15 +416,103 @@ h6 {
 }
 
 #hero h1 {
-  color: #fff;
-  font-family: "Raleway", sans-serif;
+  color: var(--color-topic);
   font-size: 56px;
   font-weight: 600;
   text-transform: uppercase;
+  opacity: 1;
+  text-shadow: 0 0 8px var(--color-white);
+  animation: blinking1 3s linear 3;
 }
 
 #hero h1 span {
-  color: var(--color-topic);
+  color: var(--color-white);
+  text-shadow: 0 0 8px var(--color-topic);
+  animation: blinking2 2.5s linear 5;
+}
+
+@keyframes blinking1 {
+  0% {
+    opacity: 0.2;
+  }
+  8% {
+    opacity: 0.2;
+  }
+  9% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  11% {
+    opacity: 0.2;
+  }
+  12% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.2;
+  }
+  74% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  76% {
+    opacity: 1;
+  }
+  76% {
+    opacity: 0.5;
+  }
+  84% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blinking2 {
+  0% {
+    opacity: 0.2;
+  }
+  19% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  21% {
+    opacity: 1;
+  }
+  22% {
+    opacity: 0.2;
+  }
+  23% {
+    opacity: 0.2;
+  }
+  36% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 1;
+  }
+  41% {
+    opacity: 0;
+  }
+  42% {
+    opacity: 1;
+  }
+  43% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 991px) {
@@ -440,12 +525,6 @@ h6 {
   color: #ebebeb;
   font-weight: 700;
   font-size: 20px;
-}
-
-@media (max-width: 991px) {
-  #hero p {
-    font-size: 16px;
-  }
 }
 
 @media (max-width: 991px) {
@@ -486,9 +565,7 @@ h6 {
   height: 120px;
   animation-delay: 0s;
   animation: pulsate-btn 2s;
-  animation-direction: forwards;
   animation-iteration-count: infinite;
-  animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
   border: 2px solid rgba(163, 163, 163, 0.4);
@@ -703,9 +780,7 @@ h6 {
   border-radius: 50%;
   width: 36px;
   height: 36px;
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
 }
 
 #speakers-details .details .social a:hover {
@@ -1370,9 +1445,7 @@ h6 {
   width: 36px;
   height: 36px;
   transition: 0.3s;
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
 }
 
 #footer .footer-top .social-links a i {
