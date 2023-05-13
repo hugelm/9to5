@@ -4,6 +4,6 @@ AuthUserFile /assets/.htpasswd
 Require valid-user
 
 # rule for subdomain "preview"
-#RewriteEngine On
-#RewriteCond %{HTTP_HOST} ^preview\. [NC]
-#RewriteRule ^ - [F]
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^preview\. [NC]
+RewriteRule ^ - [F]
