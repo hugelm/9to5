@@ -286,14 +286,15 @@ h6 {
   white-space: nowrap;
 }
 
+.tickets:hover {
+  background: none;
+  color: var(--color-white);
+}
+
 .tickets:focus {
   color: var(--color-white);
 }
 
-.buy-tickets:hover {
-  background: none;
-  color: var(--color-white);
-}
 
 @media (max-width: 992px) {
   .tickets {
