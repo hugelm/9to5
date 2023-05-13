@@ -14,12 +14,11 @@
   --color-dark: #000;
 }
 
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
-  background: #000;
+  background: var(--color-dark);
   color: #2f3138;
   font-family: "Open Sans", sans-serif;
 }
@@ -195,7 +194,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #fff;
+  color: var(--color-white);
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -220,8 +219,7 @@ h6 {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
-  transition: 0.3s;
+  background: var(--color-dark);
   z-index: 999;
 }
 
@@ -239,9 +237,8 @@ h6 {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #fff;
+  background-color: var(--color-dark);
   overflow-y: auto;
-  transition: 0.3s;
 }
 
 .navbar-mobile>ul>li {
@@ -258,7 +255,7 @@ h6 {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #060c22;
+  color: var(--color-white);
 }
 
 .navbar-mobile a:hover,
@@ -272,6 +269,9 @@ h6 {
   margin: 15px;
 }
 
+/**
+* Ticket Button
+*/
 .tickets {
   color: var(--color-white);
   background: var(--color-primary);
@@ -294,6 +294,7 @@ h6 {
 .tickets:focus {
   color: var(--color-white);
 }
+
 
 @media (max-width: 992px) {
   .tickets {
@@ -419,15 +420,103 @@ h6 {
 }
 
 #hero h1 {
-  color: #fff;
-  font-family: "Raleway", sans-serif;
+  color: var(--color-topic);
   font-size: 56px;
   font-weight: 600;
   text-transform: uppercase;
+  opacity: 1;
+  text-shadow: 0 0 8px var(--color-white);
+  animation: blinking1 3s linear 3;
 }
 
 #hero h1 span {
-  color: var(--color-topic);
+  color: var(--color-white);
+  text-shadow: 0 0 8px var(--color-topic);
+  animation: blinking2 2.5s linear 5;
+}
+
+@keyframes blinking1 {
+  0% {
+    opacity: 0.2;
+  }
+  8% {
+    opacity: 0.2;
+  }
+  9% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  11% {
+    opacity: 0.2;
+  }
+  12% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.2;
+  }
+  74% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  76% {
+    opacity: 1;
+  }
+  76% {
+    opacity: 0.5;
+  }
+  84% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blinking2 {
+  0% {
+    opacity: 0.2;
+  }
+  19% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  21% {
+    opacity: 1;
+  }
+  22% {
+    opacity: 0.2;
+  }
+  23% {
+    opacity: 0.2;
+  }
+  36% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 1;
+  }
+  41% {
+    opacity: 0;
+  }
+  42% {
+    opacity: 1;
+  }
+  43% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 991px) {
@@ -440,12 +529,6 @@ h6 {
   color: #ebebeb;
   font-weight: 700;
   font-size: 20px;
-}
-
-@media (max-width: 991px) {
-  #hero p {
-    font-size: 16px;
-  }
 }
 
 @media (max-width: 991px) {
@@ -486,9 +569,7 @@ h6 {
   height: 120px;
   animation-delay: 0s;
   animation: pulsate-btn 2s;
-  animation-direction: forwards;
   animation-iteration-count: infinite;
-  animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
   border: 2px solid rgba(163, 163, 163, 0.4);
@@ -543,10 +624,12 @@ h6 {
 #hero .countdown {
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 3rem;
+  margin-left: 0.8rem;
 }
 
 #hero .countdown span {
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 3px var(--color-topic);
   font-size: 3rem;
   margin-left: 0.8rem;
 }
@@ -560,30 +643,11 @@ h6 {
   font-weight: bold;
 }
 
-#hero .countdown-circles span {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-#hero .countdown-circles span:first-of-type {
-  margin-left: 0;
-}
-
-#hero .rounded {
-  border-radius: 1rem !important;
-}
-
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
 #about {
-  background: url("../img/logos/halloween.jpg");
+  background: url(../img/logos/dark_slogan_halloween.jpg);
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -703,9 +767,7 @@ h6 {
   border-radius: 50%;
   width: 36px;
   height: 36px;
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
 }
 
 #speakers-details .details .social a:hover {
@@ -1103,7 +1165,7 @@ h6 {
 --------------------------------------------------------------*/
 #news {
   padding: 60px;
-  background: url(../img/logos/vanilla.jpg) center center no-repeat;
+  background: url(../img/logos/dark_slogan.jpg) center center no-repeat;
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -1127,7 +1189,7 @@ h6 {
 
 #news .section-header h2,
 #news p {
-  color: #fff;
+  color: var(--color-white);
 }
 
 #news input {
@@ -1151,8 +1213,8 @@ h6 {
   border: 0;
   padding: 9px 25px;
   cursor: pointer;
-  background: #f82249;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-white);
   transition: all 0.3s ease;
   outline: none;
   font-size: 14px;
@@ -1160,7 +1222,7 @@ h6 {
 }
 
 #news button:hover {
-  background: #e0072f;
+  background: var(--color-secondary);
 }
 
 @media (max-width: 460px) {
@@ -1170,10 +1232,18 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Buy Tickets Section
+# Tickets Section (includes Eventfrog Integration)
 --------------------------------------------------------------*/
 #tickets {
   padding: 60px 0;
+}
+
+element {
+  background: var(--color-dark) !important;
+}
+
+#tickets iframe .embed{
+  background-color: black !important;
 }
 
 /*--------------------------------------------------------------
@@ -1361,16 +1431,15 @@ h6 {
 }
 
 #footer .footer-top .social-links a {
-  display: inline-block;
+  display: inline-flex;
   background: #222636;
-  color: #eee;
+  color: var(--color-white);
   line-height: 1;
   margin-right: 4px;
   border-radius: 50%;
   width: 36px;
   height: 36px;
   transition: 0.3s;
-  display: inline-flex;
   align-items: center;
   justify-content: center;
 }
@@ -1382,7 +1451,7 @@ h6 {
 
 #footer .footer-top .social-links a:hover {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-white);
 }
 
 #footer .footer-top h4 {

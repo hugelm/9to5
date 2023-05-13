@@ -1,0 +1,21 @@
+name: productive-hosting-deployment
+
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy to IONOS
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Deploy file
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          username: ${{ secrets.FTP_USERNAME }}
+          server: ${{ secrets.FTP_SERVER }}
+          port: ${{ secrets.FTP_PORT }}
+          local_path: './'
+          remote_path: '/9to5/prod/'
+          sftp_only: true
+          password: ${{ secrets.FTP_PASSWORD }}
