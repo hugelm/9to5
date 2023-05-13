@@ -18,7 +18,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  background: #000;
+  background: var(--color-dark);
   color: #2f3138;
   font-family: "Open Sans", sans-serif;
 }
@@ -220,7 +220,6 @@ h6 {
   left: 0;
   bottom: 0;
   background: var(--color-dark);
-  transition: 0.3s;
   z-index: 999;
 }
 
@@ -240,7 +239,6 @@ h6 {
   padding: 10px 0;
   background-color: var(--color-dark);
   overflow-y: auto;
-  transition: 0.3s;
 }
 
 .navbar-mobile>ul>li {
@@ -289,6 +287,11 @@ h6 {
 }
 
 .tickets:focus {
+  color: var(--color-white);
+}
+
+.buy-tickets:hover {
+  background: none;
   color: var(--color-white);
 }
 
@@ -1169,7 +1172,7 @@ h6 {
 
 #news:before {
   content: "";
-  background: rgba(6, 12, 34, 0.6);
+  background: var(--color-dark);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1185,12 +1188,12 @@ h6 {
 
 #news .section-header h2,
 #news p {
-  color: #fff;
+  color: var(--color-white);
 }
 
 #news input {
-  background: #fff;
-  color: #060c22;
+  background: var(--color-white);
+  color: var(--color-dark);
   border: 0;
   outline: none;
   margin: 0;
@@ -1209,8 +1212,8 @@ h6 {
   border: 0;
   padding: 9px 25px;
   cursor: pointer;
-  background: #f82249;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-white);
   transition: all 0.3s ease;
   outline: none;
   font-size: 14px;
@@ -1218,7 +1221,7 @@ h6 {
 }
 
 #news button:hover {
-  background: #e0072f;
+  background: var(--color-secondary);
 }
 
 @media (max-width: 460px) {
@@ -1228,10 +1231,18 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Buy Tickets Section
+# Tickets Section (includes Eventfrog Integration)
 --------------------------------------------------------------*/
 #tickets {
   padding: 60px 0;
+}
+
+element {
+  background: var(--color-dark) !important;
+}
+
+#tickets iframe .embed{
+  background-color: black !important;
 }
 
 /*--------------------------------------------------------------
