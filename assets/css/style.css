@@ -1173,7 +1173,7 @@ h6 {
 
 #news:before {
   content: "";
-  background: var(--color-dark);
+  background: rgba(6, 12, 34, 0.6);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1193,8 +1193,8 @@ h6 {
 }
 
 #news input {
-  background: var(--color-white);
-  color: var(--color-dark);
+  background: #fff;
+  color: #060c22;
   border: 0;
   outline: none;
   margin: 0;
