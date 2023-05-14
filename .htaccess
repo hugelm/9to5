@@ -1,9 +1,11 @@
-AuthType Basic
-AuthName "Passwword Required"
-AuthUserFile /assets/.htpasswd
-Require valid-user
-
 # rule for subdomain "preview"
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^preview\. [NC]
-RewriteRule ^ - [F]
+RewriteCond %{HTTP:Authorization} ^$
+RewriteRule ^ - [L,R=401]
+
+# basic auth
+AuthType Basic
+AuthName "Authentication Required"
+AuthUserFile /9to5/demo/assets/htdocs/.htpasswd
+Require valid-user
