@@ -1,6 +1,6 @@
 AuthType Basic
-AuthName "Passwword Required"
-AuthUserFile /assets/.htpasswd
+AuthName "Authentication Required"
+AuthUserFile /9to5/demo/assets/htdocs/.htpasswd
 Require valid-user
 
 # rule for subdomain "preview"
