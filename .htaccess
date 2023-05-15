@@ -1,14 +1,10 @@
-# rule for subdomain "preview"
-RewriteBase /
-Options +FollowSymLinks
-RewriteCond %{HTTPS_HOST} ^preview\. [NC]
-RewriteCond %{HTTPS:Authorization} ^$
-RewriteRule ^ - [E=REQUIRE_AUTH:true]
-
-# basic auth
-<If "%{ENV:REQUIRE_AUTH} == 'true'">
-  AuthType Basic
-  AuthName "Authentication Required"
-  AuthUserFile /9to5/demo/assets/htdocs/.htpasswd
-  Require valid-user
+# basic auth for subdomain "preview"
+<If "req('Host') =~ /^preview\.([^.]+)/">
+    AuthType Basic
+    AuthName "Authentication Required"
+    AuthUserFile /kunden/homepages/33/d961418779/htdocs/pages/9to5/htdocs/.htpasswd
+    Require valid-user
 </If>
+<Else>
+    Require all granted
+</Else>
