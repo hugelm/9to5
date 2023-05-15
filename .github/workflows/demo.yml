@@ -20,6 +20,6 @@ jobs:
           port: ${{ secrets.FTP_PORT }}
           delete_remote_files: true
           local_path: './'
-          remote_path: '/9to5/demo/'
+          remote_path: '/pages/9to5/demo/'
           sftp_only: true
           password: ${{ secrets.FTP_PASSWORD }}
