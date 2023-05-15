@@ -1,8 +1,8 @@
 # rule for subdomain "preview"
 RewriteBase /
 Options +FollowSymLinks
-RewriteCond %{HTTP_HOST} ^preview\. [NC]
-RewriteCond %{HTTP:Authorization} ^$
+RewriteCond %{HTTPS_HOST} ^preview\. [NC]
+RewriteCond %{HTTPS:Authorization} ^$
 RewriteRule ^ - [E=REQUIRE_AUTH:true]
 
 # basic auth
