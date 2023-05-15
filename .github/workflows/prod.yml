@@ -2,8 +2,6 @@ name: productive-hosting-deployment
 
 on:
   workflow_dispatch:
-    branches:
-      - main
 
 jobs:
   deploy:
