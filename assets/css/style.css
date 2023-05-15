@@ -1232,18 +1232,10 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Tickets Section (includes Eventfrog Integration)
+# Ticket Section
 --------------------------------------------------------------*/
 #tickets {
   padding: 60px 0;
-}
-
-element {
-  background: var(--color-dark) !important;
-}
-
-#tickets iframe .embed{
-  background-color: black !important;
 }
 
 /*--------------------------------------------------------------
