@@ -1208,19 +1208,21 @@ h6 {
 }
 
 #news .contact-info {
-  margin-bottom: 20px;
   text-align: center;
 }
 
 #news .contact-info i {
-  font-size: 148px;
+  font-size: 132px;
   display: inline-block;
   margin-bottom: 10px;
   color: var(--color-primary);
+  transition: 0.5s;
 }
 
 #news .contact-info i:hover {
+  font-size: 156px;
   color: var(--color-secondary);
+  transition: 0.5s;
 }
 
 /*--------------------------------------------------------------
