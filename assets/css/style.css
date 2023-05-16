@@ -1250,25 +1250,14 @@ h6 {
   color: var(--color-primary);
 }
 
-#contact .contact-address,
-#contact .contact-phone,
-#contact .contact-email {
+#contact .contact-item {
   margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {
 
-  #contact .contact-address,
-  #contact .contact-phone,
-  #contact .contact-email {
+  #contact .contact-item {
     padding: 20px 0;
-  }
-}
-
-@media (min-width: 768px) {
-  #contact .contact-phone {
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
   }
 }
 
