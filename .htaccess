@@ -1,4 +1,9 @@
-# basic auth for subdomain "preview"
+# Redirect HTTP to HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Basic Auth for subdomain "preview"
 <If "req('Host') =~ /^preview\.([^.]+)/">
     AuthType Basic
     AuthName "Authentication Required"
