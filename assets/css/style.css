@@ -1192,43 +1192,20 @@ h6 {
   color: var(--color-white);
 }
 
-#news input {
-  background: #fff;
-  color: #060c22;
-  border: 0;
-  outline: none;
-  margin: 0;
-  padding: 9px 20px;
-  border-radius: 50px;
-  font-size: 14px;
+#news .contact-info {
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-@media (min-width: 767px) {
-  #news input {
-    min-width: 400px;
-  }
+#news .contact-info i {
+  font-size: 148px;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--color-primary);
 }
 
-#news button {
-  border: 0;
-  padding: 9px 25px;
-  cursor: pointer;
-  background: var(--color-primary);
-  color: var(--color-white);
-  transition: all 0.3s ease;
-  outline: none;
-  font-size: 14px;
-  border-radius: 50px;
-}
-
-#news button:hover {
-  background: var(--color-secondary);
-}
-
-@media (max-width: 460px) {
-  #news button {
-    margin-top: 10px;
-  }
+#news .contact-info i:hover {
+  color: var(--color-secondary);
 }
 
 /*--------------------------------------------------------------
