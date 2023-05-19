@@ -1334,7 +1334,7 @@ h6 {
 
 #contact .php-email-form input:focus,
 #contact .php-email-form textarea:focus {
-  border-color: #f82249;
+  border-color: var(--color-primary);
 }
 
 #contact .php-email-form input {

@@ -1,9 +1,14 @@
 <?php
 
-$field_name = $_POST['name'];
-$field_email = $_POST['email'];
-$field_subject = $_POST['subject'];
-$field_message = $_POST['msg'];
+//$field_name = $_POST['name'];
+//$field_email = $_POST['email'];
+//$field_subject = $_POST['subject'];
+//$field_message = $_POST['msg'];
+
+$field_name = "t";
+$field_email = "t";
+$field_subject = "t";
+$field_message = "t";
 
 $mail_to = 'info@9to5-events.com';
 $subject = 'Anfrage über Kontaktformular von '.$field_name;
@@ -20,14 +25,12 @@ $mail_status = mail($mail_to,$subject,$body_message,$headers);
 if ($mail_status) { ?>
 	<script language="javascript" type="text/javascript">
 		alert('Vielen Dank für Deine Nachricht. Wir werden uns schnellstmöglich mit Dir in Verbindung setzen.');
-		window.location = '../index.php';
 	</script>
 <?php
 }
 else { ?>
 	<script language="javascript" type="text/javascript">
-		alert('Deine Nachricht konnte nicht versendent werden. Bitte versuche es später erneut.');
-		window.location = '../contact.php';
+		alert('Deine Nachricht konnte nicht versendet werden. Bitte versuche es später erneut.');
 	</script>
 <?php
 }
