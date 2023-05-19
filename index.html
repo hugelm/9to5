@@ -783,17 +783,16 @@
 
         <div class="row contact-info">
 
-          <div class="col-md-6">
+          <div class="col-md-4">
             <a href="https://www.instagram.com/direct/t/340282366841710301244259323592876957579" target="_blank">
               <div class="contact-item">
                 <i class="bi bi-instagram"></i>
-                <h3>Instagram DM</h3>
+                <h3>Instagram-DM</h3>
                 <p>9to5 Events - Work Your Night</p>
               </div>
             </a>
           </div>
 
-          <!--
           <div class="col-md-4">
             <a href="#contact">
               <div class="contact-item">
@@ -803,9 +802,8 @@
               </div>
             </a>
           </div>
-          -->
 
-          <div class="col-md-6">
+          <div class="col-md-4">
             <a href="mailto:info@9to5-events.com">
               <div class="contact-item">
                 <i class="bi bi-envelope"></i>
@@ -818,7 +816,7 @@
         </div>
 
         <div class="form" id="form">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <form action="assets/php/sendMsg.php" method="post" role="form" class="php-email-form">
             <div class="row">
               <div class="form-group col-md-6">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Dein Name">
@@ -831,12 +829,12 @@
               <input type="text" class="form-control" name="subject" id="subject" placeholder="Um was geht es?" required>
             </div>
             <div class="form-group mt-3">
-              <textarea class="form-control" name="message" rows="5" placeholder="Wie können wir Dir helfen?" required></textarea>
+              <textarea class="form-control" name="message" id="msg" rows="5" placeholder="Wie können wir Dir helfen?" required></textarea>
             </div>
             <div class="my-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
+              <div class="loading">Senden...</div>
+              <div class="error-message">Deine Nachricht konnte nicht versendet werden. Bitte versuche es später noch einmal.</div>
+              <div class="sent-message">Deine Nachricht wurde versendet. Wir werden uns schnellstmöglich bei Dir melden!</div>
             </div>
             <div class="text-center">
               <p style="color: white; font-size: 14px">
