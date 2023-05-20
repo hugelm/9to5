@@ -6,4 +6,4 @@ production (main):  https://9to5-events.com
 
 demonstration (demo):  https://preview.9to5-events.com
 
-development (dev):  https://hugelm.github.io/9to5/
+development (dev):  https://hugelm.github.io/9to5/src/web/
