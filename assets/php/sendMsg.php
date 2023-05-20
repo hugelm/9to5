@@ -1,38 +1,51 @@
 <?php
 
-//$field_name = $_POST['name'];
-//$field_email = $_POST['email'];
-//$field_subject = $_POST['subject'];
-//$field_message = $_POST['msg'];
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-$field_name = "t";
-$field_email = "t";
-$field_subject = "t";
-$field_message = "t";
+require '../vendor/php-mailer/Exception.php';
+require '../vendor/php-mailer/PHPMailer.php';
+require '../vendor/php-mailer/SMTP.php';
 
-$mail_to = 'info@9to5-events.com';
-$subject = 'Anfrage über Kontaktformular von '.$field_name;
+$env = parse_ini_file('../../.env.ini');
 
-$body_message = 'Name: '.$field_name."\n";
-$body_message .= 'E-Mail: '.$field_email."\n";
-$body_message .= 'Thema: '.$field_subject."\n";
-$body_message .= 'Nachricht: '."\n".$field_message."\n";
+$field_name = $_POST['name'];
+$field_email = $_POST['email'];
+$field_subject = $_POST['subject'];
+$field_message = $_POST['message'];
 
-$headers = 'From: '.$field_email."\r\n";
-$headers .= 'Reply-To: '.$field_email."\r\n";
+$mail = new PHPMailer(true);
+try {
+    //Server settings
+    $mail->SMTPDebug = 0;
+    $mail->isSMTP();
+    $mail->Host = $env['SMTP_Server'];
+    $mail->SMTPAuth = true;
+    $mail->Port       = $env['SMTP_Port'];
+    $mail->Username   = $env['SMTP_User'];
+    $mail->Password   = $env['SMTP_Password'];
 
-$mail_status = mail($mail_to,$subject,$body_message,$headers);
-if ($mail_status) { ?>
-	<script language="javascript" type="text/javascript">
-		alert('Vielen Dank für Deine Nachricht. Wir werden uns schnellstmöglich mit Dir in Verbindung setzen.');
-	</script>
-<?php
+    //Recipients
+    $mail->setFrom($env['SMTP_Sender']);
+    $mail->addAddress($env['SMTP_Recipient']);
+    $mail->addReplyTo($field_email, $field_name);
+
+    //Content
+    $mail->isHTML(true);
+    $mail->Subject = $field_subject;
+    $mail->Body    = $field_message;
+
+    $mail->send();
+
+    header('Location: ../../index.html');
+    exit;
+
+} catch (Exception $e) {
+
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+    //header('Location: ../../index.html');
+    //exit;
+
 }
-else { ?>
-	<script language="javascript" type="text/javascript">
-		alert('Deine Nachricht konnte nicht versendet werden. Bitte versuche es später erneut.');
-	</script>
-<?php
-}
 
-?>
