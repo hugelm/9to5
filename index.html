@@ -816,7 +816,7 @@
         </div>
 
         <div class="form" id="form">
-          <form action="assets/php/sendMsg.php" method="post" role="form" class="php-email-form" onsubmit="return swal('Deine Nachricht wurde versendet.', 'Wir werden uns schnellstmöglich bei Dir melden!', 'success');">
+          <form action="assets/php/sendMsg.php" method="post" role="form" class="php-email-form">
             <div class="row">
               <div class="form-group col-md-6">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Dein Name">
@@ -840,7 +840,37 @@
               <p style="color: white; font-size: 14px">
                 Zur Beantwortung Deine Anfrage verwenden wir die oberen Angaben. Weitere Informationen sind in unserer <a href="privacy.html" target="_blank">Datenschutzerklärung</a> zu finden.
               </p>
-              <button type="submit" id="submit-msg">Absenden</button>
+              <button type="submit" id="submit">Absenden</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="form" id="msg-form">
+          <form class="php-email-form">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="msg-name" placeholder="Dein Name">
+              </div>
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <input type="text" class="form-control" name="email" id="msg-email" placeholder="Deine Email" required>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="subject" id="msg-subject" placeholder="Um was geht es?" required>
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" id="msg-message" rows="5" placeholder="Wie können wir Dir helfen?" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Senden...</div>
+              <div class="error-message">Deine Nachricht konnte nicht versendet werden. Bitte versuche es später noch einmal.</div>
+              <div class="sent-message">Deine Nachricht wurde versendet. Wir werden uns schnellstmöglich bei Dir melden!</div>
+            </div>
+            <div class="text-center">
+              <p style="color: white; font-size: 14px">
+                Zur Beantwortung Deine Anfrage verwenden wir die oberen Angaben. Weitere Informationen sind in unserer <a href="privacy.html" target="_blank">Datenschutzerklärung</a> zu finden.
+              </p>
+              <button type="submit" id="msg-submit">Absenden</button>
             </div>
           </form>
         </div>

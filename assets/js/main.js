@@ -241,4 +241,41 @@ $(function () {
         + '<span class="h1 font-weight-bold">%S</span>'));
   });
 
+  /* =========================================
+     CONTACT FORM
+  ========================================= */
+
+  $('#msg-submit').click(function(e){
+
+    const valid = this.form.checkValidity();
+
+    if(valid){
+
+      const name = $('#msg-name');
+      const email = $('#msg-email');
+      const subject = $('#msg-subject');
+      const message = $('#msg-message');
+
+      e.preventDefault();
+      $.ajax({
+        type: 'POST',
+        url: '../assets/php/sendMsg.php',
+        data: {name: name.val(), email: email.val(), subject: subject.val(), message: message.val()},
+        success: function(data){
+          if($.trim(data) === "email sent"){
+            swal("Deine Nachricht wurde versendet.",  "Wir werden uns schnellstmöglich bei Dir melden.",  "success" );
+            setTimeout('window.location.href = "index.html"', 2000);
+          } else if($.trim(data) === "email address invalid"){
+            swal("Die angegebene E-Mail existiert nicht.",  "Bitte prüfe Deine Eingaben." ,  "warning" );
+          } else {
+            swal("Deine Nachricht konnte nicht versendet werden.",  $.trim(data),  "error" );
+          }
+        },
+        error: function(data){
+          swal("Deine Nachricht konnte nicht versendet werden." ,  "Bitte versuche es später erneut." ,  "error" );
+        }
+      });
+    }
+  });
+
 });

@@ -14,9 +14,13 @@ $field_email = $_POST['email'];
 $field_subject = $_POST['subject'];
 $field_message = $_POST['message'];
 
+if (!filter_var($field_email, FILTER_VALIDATE_EMAIL)) {
+    echo "email address invalid";
+    exit;
+}
+
 $mail = new PHPMailer(true);
 try {
-    //Server settings
     $mail->SMTPDebug = 0;
     $mail->isSMTP();
     $mail->Host = $env['SMTP_Server'];
@@ -37,15 +41,11 @@ try {
 
     $mail->send();
 
-    header('Location: ../../index.html');
-    exit;
+    echo 'email sent';
 
 } catch (Exception $e) {
 
-    echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
-    //header('Location: ../../index.html');
-    //exit;
 
 }
 
