@@ -7,7 +7,7 @@ require '../vendor/php-mailer/Exception.php';
 require '../vendor/php-mailer/PHPMailer.php';
 require '../vendor/php-mailer/SMTP.php';
 
-$env = parse_ini_file('../../.env.ini');
+$env = parse_ini_file('../../../.env.ini');
 
 $field_name = $_POST['name'];
 $field_email = $_POST['email'];
