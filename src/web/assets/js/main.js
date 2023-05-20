@@ -266,7 +266,7 @@ $(function () {
             swal("Deine Nachricht wurde versendet.",  "Wir werden uns schnellstmöglich bei Dir melden.",  "success" );
             setTimeout('window.location.href = "index.html"', 2000);
           } else if($.trim(data) === "email address invalid"){
-            swal("Die angegebene E-Mail existiert nicht.",  "Bitte prüfe Deine Eingaben." ,  "warning" );
+            swal("Die angegebene E-Mail existiert nicht.",  "Bitte überprüfe Deine Eingaben." ,  "warning" );
           } else {
             swal("Deine Nachricht konnte nicht versendet werden.",  $.trim(data),  "error" );
           }
