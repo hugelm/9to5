@@ -7,7 +7,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 <If "req('Host') =~ /^preview\.([^.]+)/">
     AuthType Basic
     AuthName "Authentication Required"
-    AuthUserFile /kunden/homepages/33/d961418779/htdocs/pages/9to5/demo/.htpasswd
+    AuthUserFile /kunden/homepages/33/d961418779/htdocs/pages/9to5/demo/htpasswd
     Require valid-user
 </If>
 <Else>
