@@ -810,6 +810,89 @@ h6 {
 /*--------------------------------------------------------------
 # Schedule Section
 --------------------------------------------------------------*/
+#schedule {
+  padding: 60px 0 60px 0;
+}
+
+#schedule .nav-tabs {
+  text-align: center;
+  margin: auto;
+  display: block;
+  border-bottom: 0;
+  margin-bottom: 30px;
+}
+
+#schedule .nav-tabs li {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+#schedule.sub-heading {
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0 auto 30px auto;
+}
+
+@media (min-width: 991px) {
+  #schedule .sub-heading {
+    width: 75%;
+  }
+}
+
+#schedule .tab-pane {
+  transition: ease-in-out 0.2s;
+}
+
+#schedule .schedule-item {
+  border-bottom: 1px solid #cad4f6;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: background-color ease-in-out 0.3s;
+}
+
+#schedule .schedule-item:hover {
+  background-color: #fff;
+}
+
+#schedule .schedule-item time {
+  padding-bottom: 5px;
+  display: inline-block;
+  color: var(--color-topic);
+}
+
+#schedule .schedule-item .act {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+#schedule .schedule-item .act img {
+  height: 100%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  transition: all ease-in-out 0.3s;
+}
+
+#schedule .schedule-item h4 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--color-primary)
+}
+
+#schedule .schedule-item p {
+  font-style: italic;
+  color: var(--color-secondary);
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Events Section
+--------------------------------------------------------------*/
 #events {
   padding: 60px 0 60px 0;
 }
@@ -874,57 +957,6 @@ h6 {
 
 #events .tab-pane {
   transition: ease-in-out 0.2s;
-}
-
-#events .schedule-item {
-  border-bottom: 1px solid #cad4f6;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  transition: background-color ease-in-out 0.3s;
-}
-
-#events .schedule-item:hover {
-  background-color: #fff;
-}
-
-#events .schedule-item time {
-  padding-bottom: 5px;
-  display: inline-block;
-}
-
-#events .schedule-item .speaker {
-  width: 60px;
-  height: 60px;
-  overflow: hidden;
-  border-radius: 50%;
-  float: left;
-  margin: 0 10px 10px 0;
-}
-
-#events .schedule-item .speaker img {
-  height: 100%;
-  transform: translateX(-50%);
-  margin-left: 50%;
-  transition: all ease-in-out 0.3s;
-}
-
-#events .schedule-item h4 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-#events .schedule-item h4 span {
-  font-style: italic;
-  color: #19328e;
-  font-weight: normal;
-  font-size: 16px;
-}
-
-#events .schedule-item p {
-  font-style: italic;
-  color: #152b79;
-  margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
