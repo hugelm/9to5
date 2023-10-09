@@ -878,7 +878,7 @@ h6 {
 }
 
 #schedule .schedule-item h4 {
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 5px;
   color: var(--color-primary)
@@ -886,6 +886,7 @@ h6 {
 
 #schedule .schedule-item p {
   font-style: italic;
+  font-size: 14px;
   color: var(--color-secondary);
   margin-bottom: 0;
 }
