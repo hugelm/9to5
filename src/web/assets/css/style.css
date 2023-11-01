@@ -9,7 +9,7 @@
 :root {
   --color-primary: #804790;
   --color-secondary: #40abf4;
-  --color-topic: #e85335;
+  --color-topic: #40abf4;
   --color-white: #fff;
   --color-dark: #000;
 }
@@ -397,15 +397,15 @@ h6 {
 #hero {
   width: 100%;
   height: 130vh;
-  background: url(../../assets/img/topics/halloween.jpg) top center;
+  background: url(../../assets/img/logos/transparent_slogan.png) top center;
   background-size: cover;
   overflow: hidden;
   position: relative;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   #hero {
-    background-attachment: fixed;
+    background-size: auto 100%;
   }
 }
 
@@ -422,8 +422,8 @@ h6 {
 #hero .hero-container {
   position: absolute;
   bottom: 0;
-  left: 0;
-  top: 90px;
+  left: 50px;
+  top: 0px;
   right: 0;
   display: flex;
   justify-content: center;
@@ -431,12 +431,6 @@ h6 {
   flex-direction: column;
   text-align: center;
   padding: 0 15px;
-}
-
-@media (max-width: 991px) {
-  #hero .hero-container {
-    top: 70px;
-  }
 }
 
 #hero h1 {
@@ -667,7 +661,7 @@ h6 {
 # About Section
 --------------------------------------------------------------*/
 #about {
-  background: url(../../assets/img/logos/dark_slogan_halloween.jpg);
+  background: url(../../assets/img/logos/transparent_slogan.png);
   background-size: cover;
   overflow: hidden;
   position: relative;
