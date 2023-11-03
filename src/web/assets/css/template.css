@@ -1202,58 +1202,6 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Subscribe Section
---------------------------------------------------------------*/
-#news {
-  padding: 60px;
-  background: url(../../assets/img/event-gallery/05.jpg) center center no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  position: relative;
-}
-
-#news:before {
-  content: "";
-  background: rgba(6, 12, 34, 0.6);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-@media (min-width: 1024px) {
-  #news {
-    background-attachment: fixed;
-  }
-}
-
-#news .section-header h2 {
-  color: var(--color-secondary);
-}
-
-#news .section-header p {
-  color: var(--color-white);
-}
-
-#news .contact-info {
-  text-align: center;
-}
-
-#news .contact-info i {
-  font-size: 132px;
-  display: inline-block;
-  color: var(--color-secondary);
-  transition: 0.5s;
-}
-
-#news .contact-info i:hover {
-  font-size: 156px;
-  color: var(--color-primary);
-  transition: 0.5s;
-}
-
-/*--------------------------------------------------------------
 # Ticket Section
 --------------------------------------------------------------*/
 #tickets {
