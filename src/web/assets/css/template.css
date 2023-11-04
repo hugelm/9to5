@@ -396,7 +396,7 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 125vh;
+  height: 120vh;
   background: url(../../assets/img/logos/transparent.png) top center;
   background-size: cover;
   overflow: hidden;
@@ -405,10 +405,10 @@ h6 {
 
 @media (max-width: 991px) {
   #hero {
-    height: 115vh;
+    top: -10vh;
+    height: 100vh;
     background-size: 60% auto;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: center;
   }
 }
@@ -433,7 +433,7 @@ h6 {
   position: absolute;
   bottom: 0;
   left: 0;
-  top: 40vh;
+  top: 35vh;
   right: 0;
   justify-content: center;
   align-items: center;
@@ -443,7 +443,7 @@ h6 {
 
 @media (max-width: 991px) {
   #hero .hero-container {
-    top: 55%;
+    top: 64%;
   }
 }
 
@@ -565,69 +565,6 @@ h6 {
   }
 }
 
-#hero .play-btn {
-  width: 94px;
-  height: 94px;
-  background: radial-gradient(var(--color-topic) 50%, rgba(101, 111, 150, 0.15) 52%);
-  border-radius: 50%;
-  display: block;
-  position: relative;
-  overflow: hidden;
-}
-
-#hero .play-btn::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-40%) translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid #fff;
-  z-index: 100;
-  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-#hero .play-btn:before {
-  content: "";
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  animation-delay: 0s;
-  animation: pulsate-btn 2s;
-  animation-iteration-count: infinite;
-  opacity: 1;
-  border-radius: 50%;
-  border: 2px solid rgba(163, 163, 163, 0.4);
-  top: -15%;
-  left: -15%;
-  background: rgba(198, 16, 0, 0);
-}
-
-#hero .play-btn:hover::after {
-  border-left: 15px solid var(--color-topic);
-  transform: scale(20);
-}
-
-#hero .play-btn:hover::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-40%) translateY(-50%);
-  width: 0;
-  height: 0;
-  border: none;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid #fff;
-  z-index: 200;
-  animation: none;
-  border-radius: 0;
-}
-
 #hero .about-btn {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
@@ -647,6 +584,89 @@ h6 {
 
 #hero .about-btn:hover {
   background: var(--color-topic);
+}
+
+#hero .play-btn {
+  width: 94px;
+  height: 94px;
+  background: radial-gradient(var(--color-topic) 50%, rgba(101, 111, 150, 0.15) 52%);
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  #hero .play-btn {
+    top: 75%;
+  }
+}
+
+#hero .play-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 100;
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+#hero .play-btn:before {
+  content: "";
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  width: 120px;
+  height: 120px;
+  animation: pulsate-btn 2s infinite;
+  opacity: 1;
+  border-radius: 50%;
+  border: 2px solid rgba(163, 163, 163, 0.4);
+  top: -15%;
+  left: -15%;
+  background: rgba(198, 16, 0, 0);
+}
+
+#hero .play-btn:hover::after {
+  border-left: 15px solid var(--color-topic);
+  transform: scale(20);
+}
+
+#hero .play-btn:hover::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 200;
+  animation: none;
+  border-radius: 0;
+}
+
+@keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
 }
 
 #hero .countdown {
