@@ -185,13 +185,13 @@ h6 {
 
 .navbar .social-links a {
   display: inline-flex;
-  padding-left: 9px;
 }
 
 .navbar .social-links i {
   color: rgba(202, 206, 221, 0.8);
   font-size: 16px;
   transition: 0.4s;
+  padding: 1vh;
 }
 
 .navbar .social-links i:hover {
