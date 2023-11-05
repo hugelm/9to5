@@ -174,7 +174,7 @@
 --------------------------------------------------------------*/
 #hero {
     width: 100%;
-    height: 120vh;
+    height: 140vh;
     background: url(../../assets/img/logos/transparent.png) top center;
     background-size: cover;
     overflow: hidden;
@@ -193,8 +193,7 @@
 
 @media (max-width: 791px) {
     #hero {
-        top: -10vh;
-        height: 100vh;
+        top: -40vh;
         background-size: 60% auto;
         background-repeat: no-repeat;
         background-position: center;
@@ -221,13 +220,13 @@
 
 @media (max-width: 991px) {
     #hero .hero-container {
-        top: 16vh;
+        top: 20vh;
     }
 }
 
 @media (max-width: 791px) {
     #hero .hero-container {
-        top: 62vh;
+        top: 85vh;
     }
 }
 
@@ -359,7 +358,6 @@
     border-radius: 50px;
     transition: 0.5s;
     line-height: 1;
-    margin: 10px;
     color: #fff;
     animation-delay: 0.8s;
     border: 2px solid var(--color-topic);
