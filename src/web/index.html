@@ -9,7 +9,7 @@
   <meta content="
   Erlebe mit uns die Party Deines Lebens! Wir von der 9to5-Partycrew haben uns als Ziel gesetzt, unvergessliche Partys zu veranstalten, die für alle Party begeisterten ein absolutes Muss sind.
   " name="description">
-  <meta content="9to5, Event, Party, Bürstadt, Halloween" name="keywords">
+  <meta content="9to5, nine to five, Events, Event, Party, Bürstadt, Halloween" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/logos/transparent.png" rel="icon">
@@ -68,8 +68,16 @@
 
       <h1 class="mb-4 pb-0"><span>Save</span> the <span>Date</span></h1>
       <p class="mb-4 pb-0">30th April 2024</p>
-      <a href="assets/videos/halloween-aftermovie.mov" class="glightbox-container play-btn mb-4"></a>
-      <a href="https://www.instagram.com/9to5.events/" class="about-btn">Stay Tuned</a>
+      <a id="glightbox-link" href="assets/videos/halloween-aftermovie.mov" class="play-btn mb-4"></a>
+      <script>
+        // Check if the screen width is less than a specific threshold (e.g., 768px for mobile)
+        if (window.innerWidth < 991) {
+          document.getElementById('glightbox-link').classList.add('glightbox-container');
+        } else {
+          document.getElementById('glightbox-link').classList.add('glightbox');
+        }
+      </script>
+      <a href="https://www.instagram.com/9to5.events/" class="about-btn" target="_blank">Stay Tuned</a>
 
       <!-- Countdown
            example from: https://bootstrapious.com/p/bootstrap-countdown
