@@ -68,12 +68,19 @@
 
       <h1 class="mb-4 pb-0"><span>Save</span> the <span>Date</span></h1>
       <p class="mb-4 pb-0">30th April 2024</p>
-      <a id="glightbox-link" href="assets/videos/halloween-aftermovie.mov" class="glightbox-container play-btn mb-4"></a>
+      <a id="glightbox-link" href="assets/videos/halloween-aftermovie.mov" class="glightbox glightbox-container play-btn mb-4"></a>
       <script>
         // Check if the screen width is less than a specific threshold (e.g., 768px for mobile)
         if (window.innerWidth > 991) {
           document.getElementById('glightbox-link').classList.add('glightbox');
           document.getElementById('glightbox-link').classList.remove('glightbox-container');
+          // Prevent the default click action for the link
+          document.getElementById('glightbox-link').addEventListener('click', function (e) {
+            e.preventDefault();
+          });
+        } else {
+          document.getElementById('glightbox-link').classList.add('glightbox-container');
+          document.getElementById('glightbox-link').classList.remove('glightbox');
           // Prevent the default click action for the link
           document.getElementById('glightbox-link').addEventListener('click', function (e) {
             e.preventDefault();
