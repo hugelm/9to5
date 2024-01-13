@@ -70,15 +70,17 @@
       <p class="mb-4 pb-0">30th April 2024</p>
       <a id="glightbox-link" href="assets/videos/halloween-aftermovie.mov" class="glightbox-container play-btn mb-4"></a>
       <script>
+
         // Check if the screen width is less than a specific threshold (e.g., 768px for mobile)
         if (window.innerWidth > 991) {
+          // Prevent the default click action for the link
+          document.getElementById('glightbox-link').addEventListener('click', function (e) {
+            e.preventDefault();
+          });
           document.getElementById('glightbox-link').classList.add('glightbox');
           document.getElementById('glightbox-link').classList.remove('glightbox-container');
-          // Prevent the default click action for the link
-          //document.getElementById('glightbox-link').addEventListener('click', function (e) {
-          //  e.preventDefault();
-          //});
         }
+
       </script>
       <a href="https://www.instagram.com/9to5.events/" class="about-btn" target="_blank">Stay Tuned</a>
 
