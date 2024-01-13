@@ -472,7 +472,7 @@
 
 #news {
     padding: 60px;
-    background: url(../../assets/img/event-gallery/05.jpg) center center no-repeat;
+    background: url(src/web/assets/img/branding/05.jpg) center center no-repeat;
     background-size: cover;
     overflow: hidden;
     position: relative;
