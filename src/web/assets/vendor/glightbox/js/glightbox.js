@@ -2402,7 +2402,7 @@
     theme: 'clean',
     closeButton: true,
     startAt: null,
-    autoplayVideos: true,
+    autoplayVideos: false,
     autofocusVideos: true,
     descPosition: 'bottom',
     width: '900px',
