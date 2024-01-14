@@ -50,8 +50,9 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Save The Date</a></li>
+          <li><a class="nav-link scrollto active" href="#about">Party</a></li>
           <li><a class="nav-link scrollto" href="#events">Nightlife Captures</a></li>
+          <li><a class="nav-link scrollto" href="#sponsoring">Sponsoring</a></li>
           <li><a class="nav-link scrollto" href="#contact">Kontakt</a></li>
         </ul>
         <a href="https://www.tiktok.com/@9to5.events" class="social-links" target="_blank"><i class="bi bi-tiktok"></i></a>
@@ -69,35 +70,43 @@
 
     <div class="hero-container" data-aos="zoom-in">
 
-      <h1 class="mb-4 pb-0"><span>Save</span> the <span>Date</span></h1>
-      <p class="mb-4 pb-0">30th April 2024</p>
+      <h1 class="mb-4 pb-0"><span>Tanz</span> in den <span>Mai</span></h1>
+      <p class="mb-4 pb-0">30. April 2024</p>
+      <p class="mb-4 pb-0">Kesselhaus Worms</p>
       <a href="assets/videos/halloween-aftermovie.mov" class="glightbox play-btn mb-4"></a>
       <script>
 
         function random_image(section) {
           // set random image from list
-          var bgm =  ['assets/img/partyshots/RL_231028_Halloween_55.jpg',
-                      'assets/img/partyshots/RL_231028_Halloween_57.jpg',
-                      'assets/img/partyshots/RL_231028_Halloween_58.jpg',
-                      'assets/img/partyshots/RL_231028_Halloween_59.jpg',
-                      'assets/img/partyshots/RL_231028_Halloween_90.jpg',
-          ];
+          if (window.innerWidth < 991) {
+            // mobile
+            var bgm =  ['assets/img/partyshots_upright/RL_231028_Halloween_51.jpg',
+                        'assets/img/partyshots_upright/RL_231028_Halloween_55.jpg',
+                        'assets/img/partyshots_upright/RL_231028_Halloween_79.jpg',
+                        'assets/img/partyshots_upright/RL_231028_Halloween_104.jpg',
+            ];
+          } else {
+            // browser
+            var bgm =  ['assets/img/partyshots/RL_231028_Halloween_55.jpg',
+                        'assets/img/partyshots/RL_231028_Halloween_57.jpg',
+                        'assets/img/partyshots/RL_231028_Halloween_58.jpg',
+                        'assets/img/partyshots/RL_231028_Halloween_59.jpg',
+                        'assets/img/partyshots/RL_231028_Halloween_90.jpg',
+            ];
+          }
 
           $(section).css({
             'background' : 'url('+ bgm[Math.floor(Math.random() * bgm.length)] + ') no-repeat',
           });
 
         }
-        if (window.innerWidth > 991) {
-          random_image("#hero")
-        }
+
+        random_image("#hero")
 
       </script>
-      <!-- Video -->
-      <a href="https://www.instagram.com/9to5.events/" class="about-btn" target="_blank">Stay Tuned</a>
+      <a href="#tickets" class="about-btn">Tickets</a>
 
-      <!-- Countdown
-           example from: https://bootstrapious.com/p/bootstrap-countdown
+      <!-- Countdown (example from: https://bootstrapious.com/p/bootstrap-countdown)
       <div class="text-white p-5 text-center mb-5" data-aos="zoom-out-up" data-aos-delay="2500">
         <div id="clock" class="countdown"></div>
       </div>
@@ -109,17 +118,18 @@
 
   <main id="main">
 
-    <!-- ======= About Section =======
+    <!-- ======= About Section =======    -->
+
     <section id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-6" data-aos="fade-right">
-            <h2>Coming Soon</h2>
+            <h2>Tanz in den Mai</h2>
             <p>
-              Eine einzige Halloween-Party ist Dir nicht genug? Uns auch nicht!
+              Feier mit Deinen Freunden den Beginn des Sommers!
               <br><br>
               Wir sorgen für abwechslungsreiche Beats, vielfältige Drinks und vor allem
-              dafür, dass Du und Deine Freunde eine unvergessliche Pre-Halloween-Party erleben.
+              dafür, dass Du und Deine Freunde eine unvergessliche Party erleben.
               <br><br>
               Wir machen mit Euch die Nacht zum Tag!
             </p>
@@ -127,24 +137,22 @@
           <div class="col-lg-3" data-aos="fade-left">
             <h2>Wo?</h2>
             <p>
-              TSG Halle in Bürstadt
+              EWR Kesselhaus in Worms
               <br><br>
-              Gartenstraße 20<br>68642 Bürstadt
+              Klosterstraße 23<br>67547 Worms
             </p>
           </div>
           <div class="col-lg-3" data-aos="fade-left">
             <h2>Wann?</h2>
             <p>
-              28. Oktober 2023
+              30. April 2024
               <br><br>
-              um 19.30 Uhr<br>Einlass ab 19.00 Uhr
+              um 21.00 Uhr<br>Einlass ab 20.30 Uhr
             </p>
           </div>
         </div>
       </div>
     </section>
-
-    -->
 
     <!-- ======= Speakers Section =======
     <section id="speakers">
@@ -261,7 +269,7 @@
           <p></p>
         </div>
 
-        <script src="https://embed.eventfrog.de/api/scripts/embed/event.js"></script><iframe width="100%" height="2200" src="https://embed.eventfrog.de/de/p/party/halloween/9to5-halloweenparty-7057690197127727492.html?color=E85335&infobox=1&description=1&location=0&organisator=0&sponsors=0"></iframe>
+        <script src="https://embed.eventfrog.de/api/scripts/embed/event.js"></script><iframe width="100%" height="2200" src="https://embed.eventfrog.de/de/p/party/disco/9to5-tanz-in-den-mai-party-7130492444311749091.html?color=60BF00&infobox=1&description=1&location=1&organisator=1&sponsors=1"></iframe>
 
       </div>
     </section>
