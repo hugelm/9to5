@@ -21,6 +21,9 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
   <!-- Template Main CSS File -->
   <link href="assets/css/template.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
@@ -49,7 +52,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Save The Date</a></li>
           <li><a class="nav-link scrollto" href="#events">Nightlife Captures</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Anfragen & Kontakt</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Kontakt</a></li>
         </ul>
         <a href="https://www.tiktok.com/@9to5.events" class="social-links" target="_blank"><i class="bi bi-tiktok"></i></a>
         <a href="https://www.instagram.com/9to5.events/" class="social-links" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -71,23 +74,23 @@
       <a href="assets/videos/halloween-aftermovie.mov" class="glightbox play-btn mb-4"></a>
       <script>
 
-        /*
-        // Check if the screen width is less than a specific threshold (e.g., 768px for mobile)
-        //if (window.innerWidth = 991) {
-        //  document.getElementById('glightbox-link').classList.add('glightbox');
-        //  document.getElementById('glightbox-link').classList.remove('glightbox-container');
-        //}
-        // Prevent the default click action for the link
-        document.getElementById('glightbox-link').addEventListener('click', function (e) {
-          e.preventDefault();
-        });
-        */
+        function random_image(section) {
+          // set random image from list
+          var bgm =  ['assets/img/partyshots/RL_231028_Halloween_55.jpg',
+                      'assets/img/partyshots/RL_231028_Halloween_57.jpg',
+                      'assets/img/partyshots/RL_231028_Halloween_58.jpg',
+                      'assets/img/partyshots/RL_231028_Halloween_59.jpg',
+                      'assets/img/partyshots/RL_231028_Halloween_90.jpg',
+          ];
 
-        const lightbox = GLightbox({
-          touchNavigation: true,
-          loop: true,
-          autoplayVideos: true
-        });
+          $(section).css({
+            'background' : 'url('+ bgm[Math.floor(Math.random() * bgm.length)] + ') no-repeat',
+          });
+
+        }
+        if (window.innerWidth > 991) {
+          random_image("#hero")
+        }
 
       </script>
       <!-- Video -->
@@ -549,19 +552,19 @@
           <p>Weitere Events sind bereits in Planung. Lasst Euch überraschen!</p>
           <br>
           -->
-          <p>Feiere mit uns: Die Nightlife Captures der letzten Partys!</p>
+          <p>Feier mit uns: Die Nightlife Captures der letzten Partys!</p>
         </div>
       </div>
 
       <div class="gallery-slider swiper" data-aos="fade-up">
         <div class="swiper-wrapper align-items-center">
-          <div class="swiper-slide"><a class="gallery-lightbox"><img src="assets/img/partyshots/RL_231028_Halloween_41.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox"><img src="assets/img/partyshots/RL_231028_Halloween_58.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox"><img src="assets/img/partyshots/RL_231028_Halloween_55.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox"><img src="assets/img/partyshots/RL_231028_Halloween_57.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox"><img src="assets/img/partyshots/RL_231028_Halloween_73.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox"><img src="assets/img/partyshots/RL_231028_Halloween_59.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox"><img src="assets/img/partyshots/RL_231028_Halloween_90.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_41.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_41.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_58.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_58.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_55.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_55.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_57.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_57.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_73.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_73.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_59.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_59.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_90.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_90.jpg" class="img-fluid" alt=""></a></div>
           <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/01.jpg"><img src="assets/img/partyshots/01.jpg" class="img-fluid" alt=""></a></div>
           <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/03.jpg"><img src="assets/img/partyshots/03.jpg" class="img-fluid" alt=""></a></div>
           <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/04.jpg"><img src="assets/img/partyshots/04.jpg" class="img-fluid" alt=""></a></div>
@@ -831,7 +834,6 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js" integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- Template Main JS File -->

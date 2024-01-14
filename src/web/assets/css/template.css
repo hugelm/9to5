@@ -115,39 +115,6 @@ h6 {
   max-height: 100px;
 }
 
-/**
-* Ticket Button
-*/
-.tickets {
-  color: var(--color-white);
-  background: var(--color-primary);
-  padding: 7px 22px;
-  margin: 0 0 0 15px;
-  border-radius: 50px;
-  border: 2px solid var(--color-primary);
-  transition: all ease-in-out 0.3s;
-  font-weight: 500;
-  line-height: 1;
-  font-size: 13px;
-  white-space: nowrap;
-}
-
-.tickets:hover {
-  background: none;
-  color: var(--color-white);
-}
-
-.tickets:focus {
-  color: var(--color-white);
-}
-
-
-@media (max-width: 992px) {
-  .tickets {
-    margin: 0 15px 0 0;
-  }
-}
-
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -746,13 +713,6 @@ h6 {
 
 #faq .faq-list .collapsed .icon-close {
   display: none;
-}
-
-/*--------------------------------------------------------------
-# Ticket Section
---------------------------------------------------------------*/
-#tickets {
-  padding: 60px 0;
 }
 
 /*--------------------------------------------------------------
