@@ -5,7 +5,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -114,7 +114,7 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -123,7 +123,7 @@
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.navbar .dropdown > a', function(e) {
+  on('click', '.navbar .dropdown > a', function (e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
@@ -133,7 +133,7 @@
   /**
    * Scrool with offset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -230,26 +230,29 @@ $(function () {
       COUNTDOWN
    ========================================= */
   function getDate() {
-    return new Date(2026,5,13,20,0,0);
+    return new Date(2026, 5, 13, 20, 0, 0);
   }
 
-  $('#clock').countdown(getDate(), function(event) {
+  $('#clock').countdown(getDate(), function (event) {
     var $this = $(this).html(event.strftime(''
-        + '<span class="h1 font-weight-bold">%D:</span>'
-        + '<span class="h1 font-weight-bold">%H:</span>'
-        + '<span class="h1 font-weight-bold">%M:</span>'
-        + '<span class="h1 font-weight-bold">%S</span>'));
+      + '<div class="countdown-unit"><span class="countdown-number">%D</span></div>'
+      + '<div class="countdown-sep">:</div>'
+      + '<div class="countdown-unit"><span class="countdown-number">%H</span></div>'
+      + '<div class="countdown-sep">:</div>'
+      + '<div class="countdown-unit"><span class="countdown-number">%M</span></div>'
+      + '<div class="countdown-sep">:</div>'
+      + '<div class="countdown-unit"><span class="countdown-number">%S</span></div>'));
   });
 
   /* =========================================
      CONTACT FORM
   ========================================= */
 
-  $('#msg-submit').click(function(e){
+  $('#msg-submit').click(function (e) {
 
     const valid = this.form.checkValidity();
 
-    if(valid){
+    if (valid) {
 
       const name = $('#msg-name');
       const email = $('#msg-email');
@@ -260,19 +263,19 @@ $(function () {
       $.ajax({
         type: 'POST',
         url: '../assets/php/sendMsg.php',
-        data: {name: name.val(), email: email.val(), subject: subject.val(), message: message.val()},
-        success: function(data){
-          if($.trim(data) === "email sent"){
-            swal("Deine Nachricht wurde versendet.",  "Wir werden uns schnellstmöglich bei Dir melden.",  "success" );
+        data: { name: name.val(), email: email.val(), subject: subject.val(), message: message.val() },
+        success: function (data) {
+          if ($.trim(data) === "email sent") {
+            swal("Deine Nachricht wurde versendet.", "Wir werden uns schnellstmöglich bei Dir melden.", "success");
             setTimeout('window.location.href = "index.html"', 2000);
-          } else if($.trim(data) === "email address invalid"){
-            swal("Die angegebene E-Mail existiert nicht.",  "Bitte überprüfe Deine Eingaben." ,  "warning" );
+          } else if ($.trim(data) === "email address invalid") {
+            swal("Die angegebene E-Mail existiert nicht.", "Bitte überprüfe Deine Eingaben.", "warning");
           } else {
-            swal("Deine Nachricht konnte nicht versendet werden.",  $.trim(data),  "error" );
+            swal("Deine Nachricht konnte nicht versendet werden.", $.trim(data), "error");
           }
         },
-        error: function(data){
-          swal("Deine Nachricht konnte nicht versendet werden." ,  "Bitte versuche es später erneut." ,  "error" );
+        error: function (data) {
+          swal("Deine Nachricht konnte nicht versendet werden.", "Bitte versuche es später erneut.", "error");
         }
       });
     }
