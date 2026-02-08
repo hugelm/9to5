@@ -230,7 +230,7 @@ $(function () {
       COUNTDOWN
    ========================================= */
   function getDate() {
-    return new Date(2025,9,25,21,0,0);
+    return new Date(2026,5,13,20,0,0);
   }
 
   $('#clock').countdown(getDate(), function(event) {
