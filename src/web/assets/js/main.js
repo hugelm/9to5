@@ -228,7 +228,13 @@ $(function () {
 
   /* =========================================
       COUNTDOWN
+      Deaktiviert, da aktuell kein Event ansteht.
+      Wieder aktivieren, sobald das nächste Event feststeht:
+      - Datum unten in getDate() setzen
+      - Countdown-Block (#clock) im Hero in index.html einkommentieren
+      - Countdown-CDN-Script in index.html einkommentieren
    ========================================= */
+  /*
   function getDate() {
     return new Date(2026,5,13,20,0,0);
   }
@@ -240,6 +246,7 @@ $(function () {
         + '<span class="h1 font-weight-bold">%M:</span>'
         + '<span class="h1 font-weight-bold">%S</span>'));
   });
+  */
 
   /* =========================================
      CONTACT FORM

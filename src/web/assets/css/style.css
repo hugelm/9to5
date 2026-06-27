@@ -448,54 +448,6 @@
 }
 
 /*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
-#about {
-    background: url(../../assets/img/branding/RL_231028_Halloween_93.jpg);
-    background-size: cover;
-    overflow: hidden;
-    position: relative;
-    color: #fff;
-    padding: 60px 0 40px 0;
-}
-
-@media (min-width: 1024px) {
-    #about {
-        background-attachment: fixed;
-    }
-}
-
-#about:before {
-    content: "";
-    background: rgba(13, 20, 41, 0.8);
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-#about h2 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: var(--color-topic);
-}
-
-#about p {
-    font-size: 14px;
-    margin-bottom: 20px;
-    color: var(--color-white);
-}
-
-/*--------------------------------------------------------------
-# Ticket Section
---------------------------------------------------------------*/
-#tickets {
-    padding: 60px 0;
-}
-
-/*--------------------------------------------------------------
 # News & Social Media Section
 --------------------------------------------------------------*/
 
@@ -577,3 +529,257 @@
         scale: 1.1;
     }
 }
+
+/*--------------------------------------------------------------
+# Next Event Section
+--------------------------------------------------------------*/
+#next-event {
+    background: url(../../assets/img/branding/RL_231028_Halloween_93.jpg) center center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    padding: 60px 0 60px 0;
+}
+
+@media (min-width: 1024px) {
+    #next-event {
+        background-attachment: fixed;
+    }
+}
+
+#next-event:before {
+    content: "";
+    background: rgba(13, 20, 41, 0.85);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#next-event .container {
+    position: relative;
+}
+
+#next-event .section-header h2 {
+    color: var(--color-topic);
+}
+
+#next-event .section-header p {
+    color: rgba(255,255,255,0.85);
+}
+
+/* Info-Karten im Next-Event-Bereich */
+.next-event-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(64, 171, 244, 0.25);
+    border-radius: 16px;
+    padding: 36px 28px;
+    text-align: center;
+    color: #fff;
+    height: 100%;
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.next-event-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-topic);
+    background: rgba(64, 171, 244, 0.1);
+}
+
+.next-event-card--highlight {
+    border-color: var(--color-primary);
+    background: rgba(128, 71, 144, 0.15);
+}
+
+.next-event-card--highlight:hover {
+    border-color: var(--color-primary);
+    background: rgba(128, 71, 144, 0.25);
+}
+
+.next-event-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--color-topic);
+    line-height: 1;
+}
+
+.next-event-card--highlight .next-event-icon {
+    color: var(--color-primary);
+}
+
+.next-event-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.next-event-card p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+    margin: 0;
+    line-height: 1.7;
+}
+
+/*--------------------------------------------------------------
+# Hero – Coming Soon Badge
+--------------------------------------------------------------*/
+.hero-coming-soon {
+    margin-top: 32px;
+    text-align: center;
+    color: #fff;
+}
+
+.coming-soon-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+    animation: pulse-badge 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-badge {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(128, 71, 144, 0.5); }
+    50%       { box-shadow: 0 0 0 10px rgba(128, 71, 144, 0); }
+}
+
+.hero-coming-soon p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+    margin: 0;
+    font-weight: 400;
+    text-shadow: none;
+}
+
+/*--------------------------------------------------------------
+# Ticket Section – Coming Soon Card
+--------------------------------------------------------------*/
+#tickets {
+    padding: 60px 0;
+}
+
+.coming-soon-card {
+    background: rgba(255,255,255,0.04);
+    border: 2px dashed rgba(64, 171, 244, 0.4);
+    border-radius: 20px;
+    padding: 56px 40px;
+    text-align: center;
+    color: #fff;
+    max-width: 680px;
+    margin: 0 auto;
+    transition: border-color 0.3s ease;
+}
+
+.coming-soon-card:hover {
+    border-color: var(--color-topic);
+}
+
+.coming-soon-card__icon {
+    font-size: 72px;
+    color: var(--color-topic);
+    margin-bottom: 24px;
+    animation: float-icon 3s ease-in-out infinite;
+}
+
+@keyframes float-icon {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+}
+
+.coming-soon-card h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.coming-soon-card p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.coming-soon-card__btn {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: #fff !important;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.coming-soon-card__btn:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+    color: #fff !important;
+}
+
+@media (max-width: 575px) {
+    .coming-soon-card {
+        padding: 40px 20px;
+    }
+    .coming-soon-card__icon {
+        font-size: 54px;
+    }
+    .coming-soon-card h3 {
+        font-size: 22px;
+    }
+}
+
+/*--------------------------------------------------------------
+# About Section (legacy – keeping styles for re-activation)
+--------------------------------------------------------------*/
+#about {
+    background: url(../../assets/img/branding/RL_231028_Halloween_93.jpg);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    padding: 60px 0 40px 0;
+}
+
+@media (min-width: 1024px) {
+    #about {
+        background-attachment: fixed;
+    }
+}
+
+#about:before {
+    content: "";
+    background: rgba(13, 20, 41, 0.8);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#about h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--color-topic);
+}
+
+#about p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: var(--color-white);
+}
+

@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>9to5 Events | Neon Night | 13.06. in Monsheim</title>
-  <meta content="
-  Erlebe mit uns die Party Deines Lebens! Wir von der 9to5-Partycrew haben uns als Ziel gesetzt, unvergessliche Partys zu veranstalten, die für alle Party begeisterten ein absolutes Muss sind.
-  " name="description">
-  <meta content="9to5, nine to five, Events, Event, Party, Monsheim, Rheinhessenhalle, Neon, Night, " name="keywords">
+  <title>9to5 Events</title>
+  <meta content="Erlebe mit uns die Party Deines Lebens! Wir von der 9to5-Partycrew haben uns als Ziel gesetzt, unvergessliche Partys zu veranstalten, die für alle Partybegeisterten ein absolutes Muss sind." name="description">
+  <meta content="9to5, nine to five, Events, Event, Party, Monsheim, Rheinhessenhalle, Coming Soon" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/logos/transparent.png" rel="icon">
@@ -39,17 +37,16 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center ">
+  <header id="header" class="d-flex align-items-center">
     <div class="container-fluid container-xxl d-flex align-items-center">
 
       <div id="logo" class="me-auto">
-        <!--<h1><a href="index.html"><span>9to5</span> Events</a></h1>-->
-        <a href="#hero" class="scrollto"><img src="assets/img/logos/transparent_slogan.png" alt="" title="9to5 Events"></a>
+        <a href="#hero" class="scrollto"><img src="assets/img/logos/transparent_slogan.png" alt="9to5 Events" title="9to5 Events"></a>
       </div>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#about">Party</a></li>-
+          <li><a class="nav-link scrollto active" href="#next-event">Next Event</a></li>
           <li><a class="nav-link scrollto" href="#events">Nightlife Captures</a></li>
           <li><a class="nav-link scrollto" href="#sponsoring">Sponsoring</a></li>
           <li><a class="nav-link scrollto" href="#contact">Kontakt</a></li>
@@ -59,8 +56,8 @@
         <a href="https://www.facebook.com/people/9to5-Events/100092849282188/" class="social-links" target="_blank"><i class="bi bi-facebook"></i></a>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
-      <!-- Ticket Call to Action Button -->
-      <a class="tickets" href="#tickets">Tickets</a>
+
+      <a class="tickets" href="#next-event">Next Event</a>
 
     </div>
   </header><!-- End Header -->
@@ -70,50 +67,46 @@
 
     <div class="hero-container" data-aos="zoom-in">
 
-      <h1 class="mb-4 pb-0"><span>Neon</span> Night</h1>
-      <<p class="mb-4 pb-0">13 Jun, Rheinhessenhalle Monsheim</p>
-      <a href="assets/videos/halloween-aftermovie.mov" class="glightbox play-btn mb-4"></a>
-      <script>
+      <h1 class="mb-4 pb-0"><span>Coming</span> Soon</h1>
+      <p class="mb-4 pb-0">Das nächste Event folgt bald – seid gespannt!</p>
 
+      <!-- Play Button: Aftermovie -->
+      <a href="assets/videos/halloween-aftermovie.mov" class="glightbox play-btn mb-4"></a>
+
+      <!-- Zufälliges Hintergrundbild -->
+      <script>
         function random_image(section) {
-          // set random image from list
           let bgm;
           if (window.innerWidth < 991) {
-            // mobile
-            bgm = ['assets/img/partyshots_upright/JL_221030_Halloween_168.jpg',
+            bgm = [
+              'assets/img/partyshots_upright/JL_221030_Halloween_168.jpg',
               'assets/img/partyshots_upright/RL_231028_Halloween_55.jpg',
               'assets/img/partyshots_upright/RL_231028_Halloween_79.jpg',
               'assets/img/partyshots_upright/RL_231028_Halloween_104.jpg',
             ];
           } else {
-            // browser
-            bgm = ['assets/img/partyshots/RL_231028_Halloween_55.jpg',
+            bgm = [
+              'assets/img/partyshots/RL_231028_Halloween_55.jpg',
               'assets/img/partyshots/RL_231028_Halloween_57.jpg',
               'assets/img/partyshots/RL_231028_Halloween_58.jpg',
               'assets/img/partyshots/RL_231028_Halloween_59.jpg',
               'assets/img/partyshots/RL_231028_Halloween_90.jpg',
             ];
           }
-
           $(section).css({
-            'background' : 'url('+ bgm[Math.floor(Math.random() * bgm.length)] + ') no-repeat',
+            'background': 'url(' + bgm[Math.floor(Math.random() * bgm.length)] + ') no-repeat center center',
+            'background-size': 'cover'
           });
-
         }
-
-        random_image("#hero")
-
+        random_image("#hero");
       </script>
-      <a class="about-btn" href="#tickets">Tickets</a>
-      <!-- Countdown -->
-      <!-- example from: https://bootstrapious.com/p/bootstrap-countdown-->
-      <div class="text-white p-5 text-center mb-5" data-aos="zoom-out-up" data-aos-delay="2500">
-        <div id="clock" class="countdown"></div>
 
+      <a class="about-btn" href="#next-event">Mehr erfahren</a>
 
-      </div>
+      <!--
+      COUNTDOWN – wird aktiviert, sobald das nächste Event feststeht.
+      Datum in main.js unter getDate() setzen.
 
-      <!-- Countdown (example from: https://bootstrapious.com/p/bootstrap-countdown)
       <div class="text-white p-5 text-center mb-5" data-aos="zoom-out-up" data-aos-delay="2500">
         <div id="clock" class="countdown"></div>
       </div>
@@ -125,162 +118,82 @@
 
   <main id="main">
 
-    <!-- ======= About Section ======= -->
-    <section id="about">
+    <!-- ======= NEXT EVENT ======= -->
+    <section id="next-event">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-right">
-            <h2>Neon Night</h2>
-            <p>
-              Feier mit Deinen Freunden den Auftakt zum Sommer!
-              <br><br>
-              Wir sorgen für abwechslungsreiche Beats, vielfältige Drinks und vor allem
-              dafür, dass Du und Deine Freunde eine unvergessliche Party erleben.
-              <br><br>
-              Wir machen mit Euch die Nacht zum Tag!
-            </p>
-          </div>
-          <div class="col-lg-3" data-aos="fade-left">
-            <h2>Wo?</h2>
-            <p>
-              Rheinhessenhalle Monsheim
-              <br><br>
-              Gerd-Heinz-Schilling-Straße 1<br>67590 Monsheim
-            </p>
-          </div>
-          <div class="col-lg-3" data-aos="fade-left">
-            <h2>Wann?</h2>
-            <p>
-              13. Juni 2026
-              <br><br>
-              um 20.00 Uhr<br>Einlass ab 19.30 Uhr
-            </p>
-          </div>
+
+        <div class="section-header" data-aos="fade-up">
+          <h2>Nächstes Event</h2>
+          <p>Wir arbeiten bereits an der nächsten Party – alle Details folgen in Kürze!</p>
         </div>
+
+        <div class="row g-4 justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="next-event-card">
+              <div class="next-event-icon"><i class="bi bi-calendar-event"></i></div>
+              <h3>Wann?</h3>
+              <p>Termin wird noch bekannt gegeben.<br>Halte Ausschau auf unseren Social-Media-Kanälen!</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="next-event-card next-event-card--highlight">
+              <div class="next-event-icon"><i class="bi bi-music-note-beamed"></i></div>
+              <h3>Was?</h3>
+              <p>Das Motto ist noch geheim.<br>Eins ist sicher: Es wird unvergesslich!</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="next-event-card">
+              <div class="next-event-icon"><i class="bi bi-geo-alt"></i></div>
+              <h3>Wo?</h3>
+              <p>Raum Monsheim.<br>Die genaue Location folgt mit der Ankündigung.</p>
+            </div>
+          </div>
+
+        </div>
+
       </div>
-    </section>
-
-    <!-- ======= Speakers Section =======
-    <section id="speakers">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Event Speakers</h2>
-          <p>Here are some of our speakers</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
-              <div class="details">
-                <h3>sgdgs</h3>
-                <p>Quas alias incidunt</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/img/speakers/2.jpg" alt="Speaker 2" class="img-fluid">
-              <div class="details">
-                <h3>Hubert Hirthe</h3>
-                <p>Consequuntur odio aut</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-              <img src="assets/img/speakers/3.jpg" alt="Speaker 3" class="img-fluid">
-              <div class="details">
-                <h3>Cole Emmerich</h3>
-                <p>Fugiat laborum et</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/speakers/4.jpg" alt="Speaker 4" class="img-fluid">
-              <div class="details">
-                <h3>grsergg</h3>
-                <p>Debitis iure vero</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/img/speakers/5.jpg" alt="Speaker 5" class="img-fluid">
-              <div class="details">
-                <h3>dgfgdfsg</h3>
-                <p>Qui molestiae natus</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-              <img src="assets/img/speakers/6.jpg" alt="Speaker 6" class="img-fluid">
-              <div class="details">
-                <h3>Willow Trantow</h3>
-                <p>Non autem dicta</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-    End Speakers Section -->
+    </section><!-- End Next Event Section -->
 
     <!-- ======= TICKETS ======= -->
-
     <section id="tickets" class="section-with-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
           <h2>Tickets</h2>
-          <p></p>
+          <p>Der Vorverkauf startet mit der offiziellen Ankündigung des nächsten Events.</p>
         </div>
 
-        <script src="https://embed.eventfrog.de/api/scripts/embed/event.js"></script><iframe width="100%" height="2200" src="https://embed.eventfrog.de/de/p/party/90-s/neon-night-80s-90s-party-7419108739825795213.html?color=60BF00&infobox=1&description=1&location=1&organisator=1&sponsors=1"></iframe>
-
+        <div class="coming-soon-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="coming-soon-card__icon">
+            <i class="bi bi-ticket-perforated"></i>
+          </div>
+          <h3>Tickets – Coming Soon</h3>
+          <p>Sobald das nächste Event feststeht, erscheint der Ticketlink direkt hier.<br>
+             Verpasse es nicht – folge uns auf Instagram für die Ankündigung!</p>
+          <a href="https://www.instagram.com/9to5.events/" target="_blank" class="coming-soon-card__btn">
+            <i class="bi bi-instagram me-2"></i>9to5 auf Instagram folgen
+          </a>
         </div>
-    </section>
+
+        <!--
+        EVENTFROG TICKET EMBED – wird aktiviert, sobald das nächste Event angelegt ist.
+        Src-URL entsprechend anpassen.
+
+        <script src="https://embed.eventfrog.de/api/scripts/embed/event.js"></script>
+        <iframe width="100%" height="2200"
+          src="https://embed.eventfrog.de/de/p/party/...EVENT-ID....html?color=60BF00&infobox=1&description=1&location=1&organisator=1&sponsors=1">
+        </iframe>
+        -->
+
+      </div>
+    </section><!-- End Tickets Section -->
 
     <!-- ======= LINE-UP =======
+    Wird aktiviert, sobald der Line-Up feststeht.
 
     <section id="schedule" class="section-with-bg">
       <div class="container" data-aos="fade-up">
@@ -301,9 +214,7 @@
           <div class="row schedule-item">
             <div class="col-md-2"><time>20:00 - 21:00</time></div>
             <div class="col-md-10">
-              <div class="act">
-                <img src="assets/img/djs/DJ%20MarcS.jpg" alt="DJ MarcS">
-              </div>
+              <div class="act"><img src="assets/img/djs/DJ%20MarcS.jpg" alt="DJ MarcS"></div>
               <h4>DJ MarcS</h4>
               <p>spielt ab 20 Uhr</p>
             </div>
@@ -312,15 +223,9 @@
           <div class="row schedule-item">
             <div class="col-md-2"><time>21:00 - 23:00</time></div>
             <div class="col-md-10">
-              <div class="act">
-                <img src="assets/img/djs/DJ%20Liarc.jpg" alt="DJ Liarc">
-              </div>
-              <div class="act">
-                <img src="assets/img/djs/DJ Schugl - Phillip.jpg" alt="DJ Schugl - Phillip">
-              </div>
-              <div class="act">
-                <img src="assets/img/djs/DJ Schugl - Marius.jpg" alt="DJ Schugl - Marius">
-              </div>
+              <div class="act"><img src="assets/img/djs/DJ%20Liarc.jpg" alt="DJ Liarc"></div>
+              <div class="act"><img src="assets/img/djs/DJ Schugl - Phillip.jpg" alt="DJ Schugl - Phillip"></div>
+              <div class="act"><img src="assets/img/djs/DJ Schugl - Marius.jpg" alt="DJ Schugl - Marius"></div>
               <h4>DJ Schugl B2B DJ Liarc</h4>
               <p>spielt ab 21 Uhr</p>
             </div>
@@ -329,300 +234,136 @@
           <div class="row schedule-item">
             <div class="col-md-2"><time>ab 23:00</time></div>
             <div class="col-md-10">
-              <div class="act">
-                <img src="assets/img/djs/DJ%20MOSV.jpg" alt="DJ MOSV">
-              </div>
+              <div class="act"><img src="assets/img/djs/DJ%20MOSV.jpg" alt="DJ MOSV"></div>
               <h4>DJ MOSV</h4>
               <p>spielt ab 23 Uhr</p>
             </div>
           </div>
 
         </div>
-
       </div>
-
-      </div>
-
     </section>
-
     -->
 
     <!-- ======= LOCATION =======
-
     <section id="info">
-
       <div class="container-fluid">
-
         <div class="section-header" data-aos="fade-up">
           <h2>Location</h2>
         </div>
-
         <div class="row g-0">
-
           <div class="col-lg-6 map" data-aos="fade-up">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2583.849537847067!2d8.456518376844924!3d49.63829034550714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797d48f8b4fcf79%3A0x61a19bd357714cbc!2sTSG%20B%C3%BCrstadt!5e0!3m2!1sen!2sde!4v1683491220172!5m2!1sen!2sde" style="border:0" allowfullscreen></iframe>
           </div>
-
           <div class="col-lg-6 info" data-aos="fade-up">
             <div class="row justify-content-center">
               <div class="col-11 col-lg-8 position-relative">
                 <h3>Rheinhessenhalle, Monsheim</h3>
-                <p>
-                  Du willst schon vor Halloween Dein Outfit auf die Probe stellen?
-                  <br><br>
-                  Am 25.10. ist DIE Gelegenheit! Feiert mit uns in der TSG Halle in Bürstadt eine Halloween-Party, die Ihr so schnell nicht vergessen werdet.
-                  <br><br>
-                  Wir freuen uns auf Euch!
-                </p>
+                <p>Location-Beschreibung folgt.</p>
               </div>
             </div>
           </div>
         </div>
-
       </div>
-
-      <div class="container-fluid gallery-container">
-        <div class="row g-0">
-
-          <div class="col-lg-3" data-aos="fade-up">
-            <div class="gallery">
-              <a class="glightbox" data-gall="gallery" href="assets/img/event-gallery/01.jpg">
-                <img src="assets/img/event-gallery/01.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3" data-aos="fade-up">
-            <div class="gallery">
-              <a class="glightbox" data-gall="gallery" href="assets/img/event-gallery/02.jpg">
-                <img src="assets/img/event-gallery/02.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3" data-aos="fade-up">
-            <div class="gallery">
-              <a class="glightbox" data-gall="gallery" href="assets/img/event-gallery/03.jpg">
-                <img src="assets/img/event-gallery/03.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3" data-aos="fade-up">
-            <div class="gallery">
-              <a class="glightbox" data-gall="gallery" href="assets/img/event-gallery/04.jpg">
-                <img src="assets/img/event-gallery/04.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
     </section>
-
     -->
 
     <!-- ======== FAQ ========
-
     <section id="faq">
-
       <div class="container" data-aos="zoom-in-up" data-aos-delay="100">
-
         <div class="section-header">
           <h2>F.A.Q.</h2>
         </div>
-
         <div class="row justify-content-center">
           <div class="col-lg-9">
-
             <ul class="faq-list">
-
               <li>
                 <div data-bs-toggle="collapse" href="#faq1" class="collapsed question">Wo genau ist die Party?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                 <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Die Party wird in der TSG Halle in Bürstadt stattfinden. Vom Bahnhof in Bürstadt seid ihr zu Fuß in etwa 10 Minuten da! Für alle Fahrerinnen und Fahrer stehen ausreichend Parkplätze vor Ort zur Verfügung.
-                    <br><br>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2583.849537847067!2d8.456518376844924!3d49.63829034550714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797d48f8b4fcf79%3A0x61a19bd357714cbc!2sTSG%20B%C3%BCrstadt!5e0!3m2!1sen!2sde!4v1683491220172!5m2!1sen!2sde" width="600" height="450" style="border:0; max-width: 95%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                  </p>
+                  <p>Details folgen mit der Ankündigung des nächsten Events.</p>
                 </div>
               </li>
-
               <li>
                 <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Ist die Party ab 16?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                 <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Ja, der Einlass für die Halloween-Party ist ab 16 Jahren. Die Tickets findest du <a href="#tickets">hier</a>!
-                  </p>
+                  <p>Infos zum Mindestalter folgen mit der Ankündigung.</p>
                 </div>
               </li>
-
               <li>
                 <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Kann ich auch mit PayPal zahlen?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                 <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Gerne kannst Du die Tickets auch über PayPal bezahlen! In diesem Fall kontaktiere uns bitte unter <a href="mailto:tickets@9to5-events.com">ticket@9to5-events.com</a>. Wir werden uns anschließend bei Dir melden.
-                  </p>
+                  <p>Gerne kannst Du die Tickets auch über PayPal bezahlen! Kontaktiere uns unter <a href="mailto:tickets@9to5-events.com">ticket@9to5-events.com</a>.</p>
                 </div>
               </li>
-
               <li>
                 <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Dürfen eigene Getränke mitgebracht werden?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                 <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Die Mitnahme von eigenen Getränken ist nicht gestattet. Gerne dürft Ihr vorglühen. Übertreibt es nur nicht, sonst muss das Sicherheitspersonal Euch von der Party ausschließen. Vor Ort ist von Bier über Longdrinks bis hin zu Shots für jeden etwas dabei. Wir haben auch schon die ein oder andere Happy Hour für Euch vorbereitet, seid gespannt!
-                  </p>
+                  <p>Die Mitnahme von eigenen Getränken ist nicht gestattet. Vor Ort ist für jeden etwas dabei!</p>
                 </div>
               </li>
-
             </ul>
-
           </div>
-        </div>
-
-      </div>
-
-    </section>
-
-     -->
-
-    <!--======= Hotels Section =======
-    <section id="hotels" class="section-with-bg">
-
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Hotels</h2>
-          <p>Her are some nearby hotels</p>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="hotel">
-              <div class="hotel-img">
-                <img src="assets/img/hotels/1.jpg" alt="Hotel 1" class="img-fluid">
-              </div>
-              <h3><a href="#">Hotel 1</a></h3>
-              <div class="stars">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-              </div>
-              <p>0.4 Mile from the Venue</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="hotel">
-              <div class="hotel-img">
-                <img src="assets/img/hotels/2.jpg" alt="Hotel 2" class="img-fluid">
-              </div>
-              <h3><a href="#">Hotel 2</a></h3>
-              <div class="stars">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill-half-full"></i>
-              </div>
-              <p>0.5 Mile from the Venue</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="hotel">
-              <div class="hotel-img">
-                <img src="assets/img/hotels/3.jpg" alt="Hotel 3" class="img-fluid">
-              </div>
-              <h3><a href="#">Hotel 3</a></h3>
-              <div class="stars">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-              </div>
-              <p>0.6 Mile from the Venue</p>
-            </div>
-          </div>
-
         </div>
       </div>
-
     </section>
-    End Hotels Section -->
+    -->
 
-
-    <!-- ======= WEITERE EVENTS ======= -->
-
+    <!-- ======= WEITERE EVENTS / NIGHTLIFE CAPTURES ======= -->
     <section id="events">
 
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Nightlife Captures</h2>
-          <!--
-          <p>Weitere Events sind bereits in Planung. Lasst Euch überraschen!</p>
-          <br>
-          -->
-          <p>Feier mit uns: Die Nightlife Captures der letzten Partys!</p>
+          <p>Die besten Momente unserer letzten Partys – hier nochmal zum Schwelgen!</p>
         </div>
       </div>
 
       <div class="gallery-slider swiper" data-aos="fade-up">
         <div class="swiper-wrapper align-items-center">
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_41.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_41.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_58.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_58.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_55.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_55.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_57.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_57.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_73.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_73.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_59.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_59.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_90.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_90.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/01.jpg"><img src="assets/img/partyshots/01.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/03.jpg"><img src="assets/img/partyshots/03.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/04.jpg"><img src="assets/img/partyshots/04.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/05.jpg"><img src="assets/img/partyshots/05.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/06.jpg"><img src="assets/img/partyshots/06.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/08.jpg"><img src="assets/img/partyshots/08.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/09.jpg"><img src="assets/img/partyshots/09.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/11.jpg"><img src="assets/img/partyshots/11.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/02.jpg"><img src="assets/img/partyshots/02.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/12.jpg"><img src="assets/img/partyshots/12.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/12.jpg"><img src="assets/img/partyshots/13.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/12.jpg"><img src="assets/img/partyshots/14.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/12.jpg"><img src="assets/img/partyshots/15.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_41.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_41.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_58.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_58.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_55.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_55.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_57.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_57.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_73.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_73.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_59.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_59.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/RL_231028_Halloween_90.jpg"><img src="assets/img/partyshots/RL_231028_Halloween_90.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/01.jpg"><img src="assets/img/partyshots/01.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/02.jpg"><img src="assets/img/partyshots/02.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/03.jpg"><img src="assets/img/partyshots/03.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/04.jpg"><img src="assets/img/partyshots/04.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/05.jpg"><img src="assets/img/partyshots/05.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/06.jpg"><img src="assets/img/partyshots/06.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/08.jpg"><img src="assets/img/partyshots/08.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/09.jpg"><img src="assets/img/partyshots/09.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/11.jpg"><img src="assets/img/partyshots/11.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/12.jpg"><img src="assets/img/partyshots/12.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/13.jpg"><img src="assets/img/partyshots/13.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/14.jpg"><img src="assets/img/partyshots/14.jpg" class="img-fluid" alt="Party"></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="assets/img/partyshots/15.jpg"><img src="assets/img/partyshots/15.jpg" class="img-fluid" alt="Party"></a></div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
 
-    </section>
+    </section><!-- End Events Section -->
 
     <!-- ======= NEWS & SOCIAL MEDIA ======= -->
-
     <section id="news">
       <div class="container" data-aos="zoom-in">
-
         <a href="https://www.instagram.com/9to5.events/" target="_blank">
-
           <div class="section-header">
-            <h2>Du willst keine Party mehr verpassen?</h2>
-            <p>Über Instagram erfährst Du als Erstes von neuen Events!</p>
+            <h2>Keine Party mehr verpassen?</h2>
+            <p>Auf Instagram erfährst Du als Erstes von neuen Events!</p>
           </div>
-
           <div class="row contact-info">
             <div class="col-md-12">
               <i class="bi bi-instagram"></i>
             </div>
           </div>
-
         </a>
-
       </div>
-    </section>
+    </section><!-- End News Section -->
 
     <!-- ======= SPONSORING ======= -->
-
     <section id="sponsoring" class="section-with-bg">
 
       <div class="container" data-aos="fade-up">
@@ -631,52 +372,45 @@
         </div>
 
         <div class="row">
-
           <div class="col-md-6" data-aos="flip-right">
             <div class="sponsor-logo">
               <a href="https://www.veltins.com/" target="_blank">
-                <img src="assets/img/sponsoring/Veltins.png" class="img-fluid" alt="">
+                <img src="assets/img/sponsoring/Veltins.png" class="img-fluid" alt="Veltins">
               </a>
             </div>
           </div>
-
           <div class="col-md-6" data-aos="flip-left">
             <div class="sponsor-logo">
               <a href="https://de.jagermeister.com/" target="_blank">
-                <img src="assets/img/sponsoring/Jaegermeister.png" class="img-fluid" alt="">
+                <img src="assets/img/sponsoring/Jaegermeister.png" class="img-fluid" alt="Jägermeister">
               </a>
             </div>
           </div>
-
           <div class="col-md-6" data-aos="flip-right">
             <div class="sponsor-logo">
               <a href="https://www.efag.com" target="_blank">
-                <img src="assets/img/sponsoring/Ficken.jpg" class="img-fluid" alt="">
+                <img src="assets/img/sponsoring/Ficken.jpg" class="img-fluid" alt="Ficken">
               </a>
             </div>
           </div>
-
           <div class="col-md-6" data-aos="flip-left">
             <div class="sponsor-logo">
               <a href="https://motion.russartloesch.de/" target="_blank">
-                <img src="assets/img/sponsoring/R&L.png" class="img-fluid" alt="">
+                <img src="assets/img/sponsoring/R&L.png" class="img-fluid" alt="R&L">
               </a>
             </div>
           </div>
-
           <div class="col-md-6" data-aos="flip-right">
             <div class="sponsor-logo">
               <a href="https://seitzevents.com/" target="_blank">
-                <img src="assets/img/sponsoring/SeitzEvents.jpg" class="img-fluid" alt="">
+                <img src="assets/img/sponsoring/SeitzEvents.jpg" class="img-fluid" alt="Seitz Events">
               </a>
             </div>
           </div>
-
-
           <div class="col-md-6" data-aos="flip-left">
             <div class="sponsor-logo">
               <a href="https://www.sls-veranstaltung.de/" target="_blank">
-                <img src="assets/img/sponsoring/SLS.jpg" class="img-fluid" alt="">
+                <img src="assets/img/sponsoring/SLS.jpg" class="img-fluid" alt="SLS">
               </a>
             </div>
           </div>
@@ -685,114 +419,95 @@
           <div class="col-md-6" data-aos="flip-right">
             <div class="sponsor-logo">
               <a href="https://bembel-with-care.com" target="_blank">
-                <img src="assets/img/sponsoring/Bembel.png" class="img-fluid" alt="">
+                <img src="assets/img/sponsoring/Bembel.png" class="img-fluid" alt="Bembel">
               </a>
             </div>
           </div>
           -->
-
-          <!--
-          <div class="col-md-6" data-aos="flip-left">
-            <div class="sponsor-logo">
-              <a href="https://www.sls-veranstaltung.de/" target="_blank">
-                <img src="assets/img/sponsoring/SLS.jpg" class="img-fluid" alt="">
-              </a>
-            </div>
-          </div>
-          -->
-
         </div>
-
       </div>
 
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Medienpartner</h2>
         </div>
-
         <div class="row">
-
-         <div class="col-md-6 d-flex align-items-center" data-aos="flip-left">
-          <div class="sponsor-logo">
-            <a href="https://www.die-knipser.online/" target="_blank">
-              <img src="assets/img/sponsoring/DieKnipser.png" class="img-fluid" alt="">
-            </a>
+          <div class="col-md-6 d-flex align-items-center" data-aos="flip-left">
+            <div class="sponsor-logo">
+              <a href="https://www.die-knipser.online/" target="_blank">
+                <img src="assets/img/sponsoring/DieKnipser.png" class="img-fluid" alt="Die Knipser">
+              </a>
+            </div>
           </div>
-         </div>
-
-         <div class="col-md-6 d-flex align-items-center" data-aos="flip-right">
-          <div class="sponsor-logo">
-            <a href="https://nibelungen-kurier.de/" target="_blank">
-              <img src="assets/img/sponsoring/NibelungenKurier.png" class="img-fluid" alt="">
-            </a>
+          <div class="col-md-6 d-flex align-items-center" data-aos="flip-right">
+            <div class="sponsor-logo">
+              <a href="https://nibelungen-kurier.de/" target="_blank">
+                <img src="assets/img/sponsoring/NibelungenKurier.png" class="img-fluid" alt="Nibelungen Kurier">
+              </a>
+            </div>
           </div>
-         </div>
-
         </div>
-
       </div>
 
-    </section>
+    </section><!-- End Sponsoring Section -->
 
     <!-- ======= CONTACT ======= -->
-
     <section id="contact" class="section-bg">
-
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Du hast weitere Fragen?</h2>
-          <p>Schreib uns eine Nachricht!</p>
+          <h2>Du hast Fragen?</h2>
+          <p>Schreib uns eine Nachricht – wir antworten schnell!</p>
         </div>
 
         <div class="row contact-info">
-
           <div class="col-md-4">
             <a href="https://www.instagram.com/direct/t/340282366841710301244259323592876957579" target="_blank">
               <div class="contact-item">
                 <i class="bi bi-instagram"></i>
                 <h3>Instagram DM</h3>
-                <p>9to5 Events - Work Your Night</p>
+                <p>9to5 Events – Work Your Night</p>
               </div>
             </a>
           </div>
-
           <div class="col-md-4">
             <a href="#contact">
               <div class="contact-item">
-                <i class="bi bi-phone"></i>
+                <i class="bi bi-chat-dots"></i>
                 <h3>Kontaktformular</h3>
                 <p>direkt über unsere Website</p>
               </div>
             </a>
           </div>
-
           <div class="col-md-4">
             <a href="mailto:ask@9to5-events.com">
               <div class="contact-item">
                 <i class="bi bi-envelope"></i>
-                <h3>Email</h3>
+                <h3>E-Mail</h3>
                 <p>ask@9to5-events.com</p>
               </div>
             </a>
           </div>
-
         </div>
 
         <div class="form" id="msg-form">
           <form class="php-email-form">
             <div class="row">
               <div class="form-group col-md-6">
+                <label for="msg-name" class="visually-hidden">Dein Name</label>
                 <input type="text" name="name" class="form-control" id="msg-name" placeholder="Dein Name">
               </div>
               <div class="form-group col-md-6 mt-3 mt-md-0">
-                <input type="text" class="form-control" name="email" id="msg-email" placeholder="Deine Email" required>
+                <label for="msg-email" class="visually-hidden">Deine E-Mail</label>
+                <input type="email" class="form-control" name="email" id="msg-email" placeholder="Deine E-Mail" required>
               </div>
             </div>
             <div class="form-group mt-3">
+              <label for="msg-subject" class="visually-hidden">Betreff</label>
               <input type="text" class="form-control" name="subject" id="msg-subject" placeholder="Um was geht es?" required>
             </div>
             <div class="form-group mt-3">
+              <label for="msg-message" class="visually-hidden">Nachricht</label>
               <textarea class="form-control" name="message" id="msg-message" rows="5" placeholder="Wie können wir Dir helfen?" required></textarea>
             </div>
             <div class="text-center">
@@ -805,7 +520,7 @@
         </div>
 
       </div>
-    </section>
+    </section><!-- End Contact Section -->
 
   </main>
 
@@ -816,33 +531,30 @@
         <div class="row">
 
           <div class="col-lg-4 col-md-4 footer-info">
-            <img src="assets/img/logos/transparent_slogan.png" alt="9to5 - Work Your Night">
+            <img src="assets/img/logos/transparent_slogan.png" alt="9to5 – Work Your Night">
             <p>
               Erlebe mit uns die Party Deines Lebens!
               <br><br>
-              Wir von der 9to5-Partycrew haben uns als Ziel gesetzt, unvergessliche Partys zu veranstalten, die für alle Partybegeisterten ein absolutes Muss sind.
-              Wir bringen unsere Leidenschaft und Expertise ein, um Events zu schaffen, die Du und Deine Freunde so schnell nicht vergessen werden.
+              Wir von der 9to5-Partycrew veranstalten unvergessliche Partys – für alle, die das Nachtleben lieben.
+              Wir bringen Leidenschaft und Expertise ein, um Events zu schaffen, die Du so schnell nicht vergessen wirst.
               <br><br>
-              Also, worauf wartest Du noch?
-              Schließ Dich der 9to5-Partycrew an und sei Teil der nächsten legendären Veranstaltung!
-              Kontaktiere uns noch heute, um mehr über unsere anstehenden Partys und Events zu erfahren.
+              Schließ Dich uns an und sei Teil der nächsten legendären Veranstaltung!
             </p>
           </div>
 
           <div class="col-lg-4 col-md-4 footer-links">
             <h4>Links</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="https://www.instagram.com/9to5.events/">9to5 @Instagram</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="https://www.tiktok.com/@9to5.events">9to5 @TikTok</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="https://www.facebook.com/people/9to5-Events/100092849282188/" >9to5 @Facebook</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#events">Events</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://www.instagram.com/9to5.events/" target="_blank">9to5 @Instagram</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://www.tiktok.com/@9to5.events" target="_blank">9to5 @TikTok</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://www.facebook.com/people/9to5-Events/100092849282188/" target="_blank">9to5 @Facebook</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#events">Nightlife Captures</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="#contact">Kontakt</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="privacy.html">Datenschutz</a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-4 footer-contact">
-
             <h4>Impressum</h4>
             <p>
               <b>Dienstanbieter</b><br>
@@ -850,38 +562,28 @@
               Umsatzsteuer-ID: DE341153974<br>
               Gesetzlicher Vertreter: Phillip Schäfer<br>
               <br>
-              <b>Anschrift & Kontaktmöglichkeiten</b><br>
+              <b>Anschrift &amp; Kontakt</b><br>
               Kriegsheimer Str. 29<br>
               67590 Monsheim, Deutschland<br>
               E-Mail: mail@9to5-events.com<br>
-              Tel. 0176/62001844<br>
+              Tel. 0176 / 62001844
             </p>
-
           </div>
 
         </div>
       </div>
     </div>
 
-
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved
+        &copy; Copyright <strong>9to5 Events</strong>. Alle Rechte vorbehalten.
       </div>
       <div class="credits">
-
-        <!--
-        All the links in the footer should remain intact.
-        You can delete the links only if you purchased the pro version.
-        Licensing information: https://bootstrapmade.com/license/
-        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
-        -->
-
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
 
-  </footer><!-- End  Footer -->
+  </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -892,7 +594,15 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js" integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!--
+  COUNTDOWN CDN – wird aktiviert, wenn das nächste Event feststeht.
+  Datum in main.js unter getDate() eintragen und den Countdown-Block im Hero auskommentieren.
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    integrity="sha512-lteuRD+aUENrZPTXWFRPTBcDDxIGWe5uu0apPEn+3ZKYDwDaEErIK9rvR0QzUGmUQ55KFE2RqGTVoZsKctGMVw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  -->
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
